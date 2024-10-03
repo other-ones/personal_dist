@@ -1,0 +1,165 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.15 (you have 1.4.11). Upgrade using: pip install --upgrade albumentations
+WARNING:xformers:WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.1+cu121 with CUDA 1201 (you have 2.1.1+cu118)
+    Python  3.9.18 (you have 3.9.19)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+wandb: Currently logged in as: tuk101234 (qlab-taewook). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.18.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.21
+wandb: Run data is saved locally in /home/twkim/project/rich_context/textual_inversion/wandb/run-20240913_153654-jmmob8zp
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run generous-forest-926
+wandb: ⭐️ View project at https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE
+wandb: 🚀 View run at https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE/runs/jmmob8zp
+[34m[1mwandb[0m: [33mWARNING[0m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+INFO:__main__:Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+
+/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+{'timestep_spacing', 'variance_type', 'sample_max_value', 'thresholding', 'dynamic_thresholding_ratio', 'clip_sample_range', 'prediction_type'} was not found in config. Values will be initialized to default values.
+{'scaling_factor'} was not found in config. Values will be initialized to default values.
+{'num_attention_heads', 'addition_time_embed_dim', 'timestep_post_act', 'encoder_hid_dim', 'projection_class_embeddings_input_dim', 'dual_cross_attention', 'class_embed_type', 'conv_in_kernel', 'class_embeddings_concat', 'num_class_embeds', 'time_embedding_act_fn', 'resnet_time_scale_shift', 'use_linear_projection', 'cross_attention_norm', 'time_cond_proj_dim', 'only_cross_attention', 'time_embedding_dim', 'upcast_attention', 'transformer_layers_per_block', 'resnet_out_scale_factor', 'conv_out_kernel', 'resnet_skip_time_act', 'addition_embed_type', 'mid_block_type', 'encoder_hid_dim_type', 'addition_embed_type_num_heads', 'mid_block_only_cross_attention', 'time_embedding_type'} was not found in config. Values will be initialized to default values.
+INFO:__main__:***** Running training *****
+INFO:__main__:  Num examples = 10000000
+INFO:__main__:  Num Epochs = 1
+INFO:__main__:  Instantaneous batch size per device = 4
+INFO:__main__:  Total train batch size (w. parallel, distributed & accumulation) = 4
+INFO:__main__:  Gradient Accumulation steps = 1
+INFO:__main__:  Total optimization steps = 3001
+set seed 7777
+saved_models/ti_models/single_reduced4_noprior_seed7777_rep2_qlab03/cat1/ti_qlab03_noprior_nomlm_cat1/src/command.txt command_path
+ti_train.py item
+--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5 item
+--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/cat1 item
+--learnable_property=object item
+--placeholder_token1=<cat1> item
+--train_prior_concept1=cat item
+--eval_prior_concept1=cat item
+--resolution=512 item
+--train_batch_size=4 item
+--gradient_accumulation_steps=1 item
+--max_train_steps=3001 item
+--learning_rate=5e-4 item
+--lr_scheduler=constant item
+--initializer_token=cat item
+--normalize_mask_embeds=0 item
+--lr_warmup_steps=0 item
+--output_dir=saved_models/ti_models/single_reduced4_noprior_seed7777_rep2_qlab03/cat1 item
+--seed=7777 item
+--mask_tokens=[MASK] item
+--lambda_mlm=0 item
+--freeze_mask_embedding=1 item
+--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt item
+--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt item
+--mask_prob=0.15 item
+--mlm_batch_size=25 item
+--scale_lr item
+--eval_prompt_type=living item
+--train_prompt_type=pet item
+--silent=0 item
+--rev=0 item
+--mlm_target=masked item
+--normalize_target1=0 item
+--caption_root=../datasets_pkgs/captions/v7 item
+--run_name=ti_qlab03_noprior_nomlm_cat1 item
+--report_to=wandb item
+--project_name=TI MLM SINGLE item
+--include_prior_concept=0 item
+32 norm_num_groups
+320 block_out_channels[0]
+32 norm_num_groups
+text_model.embeddings.token_embedding.weight text_encoder requires
+None mask_token_ids
+seeded
+captions_pet_backgrounds	552
+captions_pet_human_interactions	3528
+captions_pet_relations	29376
+captions_pet_styles	378
+captions_pet_wearings	4560
+seeded
+captions_pet_backgrounds	552
+captions_pet_human_interactions	3528
+captions_pet_relations	29376
+captions_pet_styles	378
+captions_pet_wearings	4560
+Steps:   0% 0/3001 [00:00<?, ?it/s]True accepts_keep_fp32_wrapper
+{'keep_fp32_wrapper': True} extra_args
+Steps:   0% 1/3001 [00:04<3:32:20,  4.25s/it]INFO:__main__:STEP 1 Running validation... 
+ Generating 7 images with prompt: ['a <cat1> in the jungle', 'a <cat1> with a city in the background', 'a <cat1> with a mountain in the background', 'a <cat1> on top of a purple rug in a forest', 'a <cat1> in a chef outfit', 'a <cat1> in a police outfit', 'a cube shaped <cat1>'].
+
+  0% 0/25 [00:00<?, ?it/s][A
+  4% 1/25 [00:00<00:08,  2.83it/s][A
+  8% 2/25 [00:00<00:07,  3.06it/s][A
+ 12% 3/25 [00:00<00:06,  3.15it/s][A
+ 16% 4/25 [00:01<00:06,  3.19it/s][A
+ 20% 5/25 [00:01<00:06,  3.21it/s][A
+ 24% 6/25 [00:01<00:05,  3.22it/s][A
+ 28% 7/25 [00:02<00:05,  3.23it/s][A
+ 32% 8/25 [00:02<00:05,  3.23it/s][A
+ 36% 9/25 [00:02<00:04,  3.24it/s][A
+ 40% 10/25 [00:03<00:04,  3.23it/s][A
+ 44% 11/25 [00:03<00:04,  3.24it/s][A
+ 48% 12/25 [00:03<00:04,  3.24it/s][A
+ 52% 13/25 [00:04<00:03,  3.24it/s][A
+ 56% 14/25 [00:04<00:03,  3.24it/s][A
+ 60% 15/25 [00:04<00:03,  3.24it/s][A
+ 64% 16/25 [00:04<00:02,  3.24it/s][A
+ 68% 17/25 [00:05<00:02,  3.23it/s][A
+ 72% 18/25 [00:05<00:02,  3.24it/s][A
+ 76% 19/25 [00:05<00:01,  3.24it/s][A
+ 80% 20/25 [00:06<00:01,  3.24it/s][A
+ 84% 21/25 [00:06<00:01,  3.24it/s][A
+ 88% 22/25 [00:06<00:00,  3.24it/s][A
+ 92% 23/25 [00:07<00:00,  3.24it/s][A
+ 96% 24/25 [00:07<00:00,  3.23it/s][A
+100% 25/25 [00:07<00:00,  3.23it/s][A100% 25/25 [00:08<00:00,  2.94it/s]
+Steps:   0% 1/3001 [00:15<3:32:20,  4.25s/it, _runtime=26, _timestamp=1.73e+9, loss=0.014, lr=0.002, norm_target=8.36, same_target=0, sim_target=0.989]Steps:   0% 2/3001 [00:17<7:52:13,  9.45s/it, _runtime=26, _timestamp=1.73e+9, loss=0.014, lr=0.002, norm_target=8.36, same_target=0, sim_target=0.989]Steps:   0% 2/3001 [00:17<7:52:13,  9.45s/it, _runtime=27, _timestamp=1.73e+9, loss=0.0899, lr=0.002, norm_target=8.47, same_target=0, sim_target=0.979]Steps:   0% 3/3001 [00:18<4:46:13,  5.73s/it, _runtime=27, _timestamp=1.73e+9, loss=0.0899, lr=0.002, norm_target=8.47, same_target=0, sim_target=0.979]Steps:   0% 3/3001 [00:18<4:46:13,  5.73s/it, _runtime=29, _timestamp=1.73e+9, loss=0.101, lr=0.002, norm_target=8.55, same_target=0, sim_target=0.967] Steps:   0% 4/3001 [00:19<3:19:03,  3.99s/it, _runtime=29, _timestamp=1.73e+9, loss=0.101, lr=0.002, norm_target=8.55, same_target=0, sim_target=0.967]Steps:   0% 4/3001 [00:19<3:19:03,  3.99s/it, _runtime=30, _timestamp=1.73e+9, loss=0.412, lr=0.002, norm_target=8.66, same_target=0, sim_target=0.954]Steps:   0% 5/3001 [00:21<2:30:46,  3.02s/it, _runtime=30, _timestamp=1.73e+9, loss=0.412, lr=0.002, norm_target=8.66, same_target=0, sim_target=0.954]Steps:   0% 5/3001 [00:21<2:30:46,  3.02s/it, _runtime=31, _timestamp=1.73e+9, loss=0.175, lr=0.002, norm_target=8.8, same_target=0, sim_target=0.94]  Steps:   0% 6/3001 [00:22<2:01:39,  2.44s/it, _runtime=31, _timestamp=1.73e+9, loss=0.175, lr=0.002, norm_target=8.8, same_target=0, sim_target=0.94]Steps:   0% 6/3001 [00:22<2:01:39,  2.44s/it, _runtime=33, _timestamp=1.73e+9, loss=0.156, lr=0.002, norm_target=8.93, same_target=0, sim_target=0.927]Steps:   0% 7/3001 [00:23<1:44:04,  2.09s/it, _runtime=33, _timestamp=1.73e+9, loss=0.156, lr=0.002, norm_target=8.93, same_target=0, sim_target=0.927]Steps:   0% 7/3001 [00:23<1:44:04,  2.09s/it, _runtime=34, _timestamp=1.73e+9, loss=0.246, lr=0.002, norm_target=9.07, same_target=0, sim_target=0.912]Steps:   0% 8/3001 [00:25<1:31:44,  1.84s/it, _runtime=34, _timestamp=1.73e+9, loss=0.246, lr=0.002, norm_target=9.07, same_target=0, sim_target=0.912]Steps:   0% 8/3001 [00:25<1:31:44,  1.84s/it, _runtime=35, _timestamp=1.73e+9, loss=0.0745, lr=0.002, norm_target=9.21, same_target=0, sim_target=0.897]Steps:   0% 9/3001 [00:26<1:23:30,  1.67s/it, _runtime=35, _timestamp=1.73e+9, loss=0.0745, lr=0.002, norm_target=9.21, same_target=0, sim_target=0.897]Steps:   0% 9/3001 [00:26<1:23:30,  1.67s/it, _runtime=37, _timestamp=1.73e+9, loss=0.0696, lr=0.002, norm_target=9.35, same_target=0, sim_target=0.881]Steps:   0% 10/3001 [00:27<1:17:59,  1.56s/it, _runtime=37, _timestamp=1.73e+9, loss=0.0696, lr=0.002, norm_target=9.35, same_target=0, sim_target=0.881]Steps:   0% 10/3001 [00:27<1:17:59,  1.56s/it, _runtime=38, _timestamp=1.73e+9, loss=0.0616, lr=0.002, norm_target=9.46, same_target=0, sim_target=0.867]Steps:   0% 11/3001 [00:29<1:14:50,  1.50s/it, _runtime=38, _timestamp=1.73e+9, loss=0.0616, lr=0.002, norm_target=9.46, same_target=0, sim_target=0.867]Steps:   0% 11/3001 [00:29<1:14:50,  1.50s/it, _runtime=39, _timestamp=1.73e+9, loss=0.32, lr=0.002, norm_target=9.6, same_target=0, sim_target=0.851]   Steps:   0% 12/3001 [00:30<1:11:58,  1.44s/it, _runtime=39, _timestamp=1.73e+9, loss=0.32, lr=0.002, norm_target=9.6, same_target=0, sim_target=0.851]Steps:   0% 12/3001 [00:30<1:11:58,  1.44s/it, _runtime=41, _timestamp=1.73e+9, loss=0.241, lr=0.002, norm_target=9.73, same_target=0, sim_target=0.837]Steps:   0% 13/3001 [00:31<1:09:59,  1.41s/it, _runtime=41, _timestamp=1.73e+9, loss=0.241, lr=0.002, norm_target=9.73, same_target=0, sim_target=0.837]Steps:   0% 13/3001 [00:31<1:09:59,  1.41s/it, _runtime=42, _timestamp=1.73e+9, loss=0.409, lr=0.002, norm_target=9.86, same_target=0, sim_target=0.823]Steps:   0% 14/3001 [00:33<1:08:29,  1.38s/it, _runtime=42, _timestamp=1.73e+9, loss=0.409, lr=0.002, norm_target=9.86, same_target=0, sim_target=0.823]Steps:   0% 14/3001 [00:33<1:08:29,  1.38s/it, _runtime=43, _timestamp=1.73e+9, loss=0.106, lr=0.002, norm_target=10, same_target=0, sim_target=0.809]  Steps:   0% 15/3001 [00:34<1:07:28,  1.36s/it, _runtime=43, _timestamp=1.73e+9, loss=0.106, lr=0.002, norm_target=10, same_target=0, sim_target=0.809]Steps:   0% 15/3001 [00:34<1:07:28,  1.36s/it, _runtime=44, _timestamp=1.73e+9, loss=0.207, lr=0.002, norm_target=10.1, same_target=0, sim_target=0.794]Steps:   1% 16/3001 [00:35<1:06:49,  1.34s/it, _runtime=44, _timestamp=1.73e+9, loss=0.207, lr=0.002, norm_target=10.1, same_target=0, sim_target=0.794]Steps:   1% 16/3001 [00:35<1:06:49,  1.34s/it, _runtime=46, _timestamp=1.73e+9, loss=0.173, lr=0.002, norm_target=10.3, same_target=0, sim_target=0.782]Steps:   1% 17/3001 [00:37<1:06:23,  1.34s/it, _runtime=46, _timestamp=1.73e+9, loss=0.173, lr=0.002, norm_target=10.3, same_target=0, sim_target=0.782]Steps:   1% 17/3001 [00:37<1:06:23,  1.34s/it, _runtime=47, _timestamp=1.73e+9, loss=0.201, lr=0.002, norm_target=10.4, same_target=0, sim_target=0.77] Steps:   1% 18/3001 [00:38<1:05:59,  1.33s/it, _runtime=47, _timestamp=1.73e+9, loss=0.201, lr=0.002, norm_target=10.4, same_target=0, sim_target=0.77]Steps:   1% 18/3001 [00:38<1:05:59,  1.33s/it, _runtime=48, _timestamp=1.73e+9, loss=0.11, lr=0.002, norm_target=10.6, same_target=0, sim_target=0.757]Steps:   1% 19/3001 [00:39<1:05:41,  1.32s/it, _runtime=48, _timestamp=1.73e+9, loss=0.11, lr=0.002, norm_target=10.6, same_target=0, sim_target=0.757]Steps:   1% 19/3001 [00:39<1:05:41,  1.32s/it, _runtime=50, _timestamp=1.73e+9, loss=0.296, lr=0.002, norm_target=10.7, same_target=0, sim_target=0.746]Steps:   1% 20/3001 [00:41<1:05:36,  1.32s/it, _runtime=50, _timestamp=1.73e+9, loss=0.296, lr=0.002, norm_target=10.7, same_target=0, sim_target=0.746]Steps:   1% 20/3001 [00:41<1:05:36,  1.32s/it, _runtime=51, _timestamp=1.73e+9, loss=0.114, lr=0.002, norm_target=10.8, same_target=0, sim_target=0.734]Steps:   1% 21/3001 [00:42<1:05:31,  1.32s/it, _runtime=51, _timestamp=1.73e+9, loss=0.114, lr=0.002, norm_target=10.8, same_target=0, sim_target=0.734]Steps:   1% 21/3001 [00:42<1:05:31,  1.32s/it, _runtime=52, _timestamp=1.73e+9, loss=0.305, lr=0.002, norm_target=11, same_target=0, sim_target=0.723]  Steps:   1% 22/3001 [00:43<1:05:17,  1.32s/it, _runtime=52, _timestamp=1.73e+9, loss=0.305, lr=0.002, norm_target=11, same_target=0, sim_target=0.723]Steps:   1% 22/3001 [00:43<1:05:17,  1.32s/it, _runtime=54, _timestamp=1.73e+9, loss=0.183, lr=0.002, norm_target=11.1, same_target=0, sim_target=0.712]Steps:   1% 23/3001 [00:44<1:05:09,  1.31s/it, _runtime=54, _timestamp=1.73e+9, loss=0.183, lr=0.002, norm_target=11.1, same_target=0, sim_target=0.712]Steps:   1% 23/3001 [00:44<1:05:09,  1.31s/it, _runtime=55, _timestamp=1.73e+9, loss=0.0814, lr=0.002, norm_target=11.2, same_target=0, sim_target=0.701]Steps:   1% 24/3001 [00:46<1:05:01,  1.31s/it, _runtime=55, _timestamp=1.73e+9, loss=0.0814, lr=0.002, norm_target=11.2, same_target=0, sim_target=0.701]Steps:   1% 24/3001 [00:46<1:05:01,  1.31s/it, _runtime=56, _timestamp=1.73e+9, loss=0.194, lr=0.002, norm_target=11.4, same_target=0, sim_target=0.689] Steps:   1% 25/3001 [00:47<1:04:54,  1.31s/it, _runtime=56, _timestamp=1.73e+9, loss=0.194, lr=0.002, norm_target=11.4, same_target=0, sim_target=0.689]Steps:   1% 25/3001 [00:47<1:04:54,  1.31s/it, _runtime=58, _timestamp=1.73e+9, loss=0.117, lr=0.002, norm_target=11.5, same_target=0, sim_target=0.679]Steps:   1% 26/3001 [00:48<1:04:52,  1.31s/it, _runtime=58, _timestamp=1.73e+9, loss=0.117, lr=0.002, norm_target=11.5, same_target=0, sim_target=0.679]Steps:   1% 26/3001 [00:48<1:04:52,  1.31s/it, _runtime=59, _timestamp=1.73e+9, loss=0.0695, lr=0.002, norm_target=11.6, same_target=0, sim_target=0.667]Steps:   1% 27/3001 [00:50<1:04:42,  1.31s/it, _runtime=59, _timestamp=1.73e+9, loss=0.0695, lr=0.002, norm_target=11.6, same_target=0, sim_target=0.667]Steps:   1% 27/3001 [00:50<1:04:42,  1.31s/it, _runtime=60, _timestamp=1.73e+9, loss=0.0841, lr=0.002, norm_target=11.8, same_target=0, sim_target=0.657]Steps:   1% 28/3001 [00:51<1:04:38,  1.30s/it, _runtime=60, _timestamp=1.73e+9, loss=0.0841, lr=0.002, norm_target=11.8, same_target=0, sim_target=0.657]Steps:   1% 28/3001 [00:51<1:04:38,  1.30s/it, _runtime=61, _timestamp=1.73e+9, loss=0.0992, lr=0.002, norm_target=11.9, same_target=0, sim_target=0.647]Steps:   1% 29/3001 [00:52<1:04:30,  1.30s/it, _runtime=61, _timestamp=1.73e+9, loss=0.0992, lr=0.002, norm_target=11.9, same_target=0, sim_target=0.647]Steps:   1% 29/3001 [00:52<1:04:30,  1.30s/it, _runtime=63, _timestamp=1.73e+9, loss=0.215, lr=0.002, norm_target=12, same_target=0, sim_target=0.636]   Steps:   1% 30/3001 [00:54<1:04:21,  1.30s/it, _runtime=63, _timestamp=1.73e+9, loss=0.215, lr=0.002, norm_target=12, same_target=0, sim_target=0.636]Steps:   1% 30/3001 [00:54<1:04:21,  1.30s/it, _runtime=64, _timestamp=1.73e+9, loss=0.317, lr=0.002, norm_target=12.1, same_target=0, sim_target=0.627]Steps:   1% 31/3001 [00:55<1:04:26,  1.30s/it, _runtime=64, _timestamp=1.73e+9, loss=0.317, lr=0.002, norm_target=12.1, same_target=0, sim_target=0.627]Steps:   1% 31/3001 [00:55<1:04:26,  1.30s/it, _runtime=65, _timestamp=1.73e+9, loss=0.0868, lr=0.002, norm_target=12.2, same_target=0, sim_target=0.616]Steps:   1% 32/3001 [00:56<1:04:26,  1.30s/it, _runtime=65, _timestamp=1.73e+9, loss=0.0868, lr=0.002, norm_target=12.2, same_target=0, sim_target=0.616]Steps:   1% 32/3001 [00:56<1:04:26,  1.30s/it, _runtime=67, _timestamp=1.73e+9, loss=0.254, lr=0.002, norm_target=12.3, same_target=0, sim_target=0.607] Steps:   1% 33/3001 [00:57<1:04:31,  1.30s/it, _runtime=67, _timestamp=1.73e+9, loss=0.254, lr=0.002, norm_target=12.3, same_target=0, sim_target=0.607]Steps:   1% 33/3001 [00:57<1:04:31,  1.30s/it, _runtime=68, _timestamp=1.73e+9, loss=0.0452, lr=0.002, norm_target=12.5, same_target=0, sim_target=0.597]Steps:   1% 34/3001 [00:59<1:04:22,  1.30s/it, _runtime=68, _timestamp=1.73e+9, loss=0.0452, lr=0.002, norm_target=12.5, same_target=0, sim_target=0.597]Steps:   1% 34/3001 [00:59<1:04:22,  1.30s/it, _runtime=69, _timestamp=1.73e+9, loss=0.225, lr=0.002, norm_target=12.6, same_target=0, sim_target=0.589] Steps:   1% 35/3001 [01:00<1:04:19,  1.30s/it, _runtime=69, _timestamp=1.73e+9, loss=0.225, lr=0.002, norm_target=12.6, same_target=0, sim_target=0.589]Steps:   1% 35/3001 [01:00<1:04:19,  1.30s/it, _runtime=71, _timestamp=1.73e+9, loss=0.198, lr=0.002, norm_target=12.7, same_target=0, sim_target=0.58] Steps:   1% 36/3001 [01:02<1:09:04,  1.40s/it, _runtime=71, _timestamp=1.73e+9, loss=0.198, lr=0.002, norm_target=12.7, same_target=0, sim_target=0.58]Steps:   1% 36/3001 [01:02<1:09:04,  1.40s/it, _runtime=72, _timestamp=1.73e+9, loss=0.147, lr=0.002, norm_target=12.8, same_target=0, sim_target=0.57]Steps:   1% 37/3001 [01:03<1:07:33,  1.37s/it, _runtime=72, _timestamp=1.73e+9, loss=0.147, lr=0.002, norm_target=12.8, same_target=0, sim_target=0.57]Steps:   1% 37/3001 [01:03<1:07:33,  1.37s/it, _runtime=74, _timestamp=1.73e+9, loss=0.107, lr=0.002, norm_target=12.9, same_target=0, sim_target=0.562]Steps:   1% 38/3001 [01:04<1:06:40,  1.35s/it, _runtime=74, _timestamp=1.73e+9, loss=0.107, lr=0.002, norm_target=12.9, same_target=0, sim_target=0.562]Steps:   1% 38/3001 [01:04<1:06:40,  1.35s/it, _runtime=75, _timestamp=1.73e+9, loss=0.326, lr=0.002, norm_target=13, same_target=0, sim_target=0.556]  Steps:   1% 39/3001 [01:06<1:05:59,  1.34s/it, _runtime=75, _timestamp=1.73e+9, loss=0.326, lr=0.002, norm_target=13, same_target=0, sim_target=0.556]Steps:   1% 39/3001 [01:06<1:05:59,  1.34s/it, _runtime=76, _timestamp=1.73e+9, loss=0.38, lr=0.002, norm_target=13.1, same_target=0, sim_target=0.551]Steps:   1% 40/3001 [01:07<1:05:31,  1.33s/it, _runtime=76, _timestamp=1.73e+9, loss=0.38, lr=0.002, norm_target=13.1, same_target=0, sim_target=0.551]Steps:   1% 40/3001 [01:07<1:05:31,  1.33s/it, _runtime=77, _timestamp=1.73e+9, loss=0.136, lr=0.002, norm_target=13.3, same_target=0, sim_target=0.546]Steps:   1% 41/3001 [01:08<1:05:11,  1.32s/it, _runtime=77, _timestamp=1.73e+9, loss=0.136, lr=0.002, norm_target=13.3, same_target=0, sim_target=0.546]Steps:   1% 41/3001 [01:08<1:05:11,  1.32s/it, _runtime=79, _timestamp=1.73e+9, loss=0.251, lr=0.002, norm_target=13.4, same_target=0, sim_target=0.539]Steps:   1% 42/3001 [01:10<1:04:51,  1.31s/it, _runtime=79, _timestamp=1.73e+9, loss=0.251, lr=0.002, norm_target=13.4, same_target=0, sim_target=0.539]Steps:   1% 42/3001 [01:10<1:04:51,  1.31s/it, _runtime=80, _timestamp=1.73e+9, loss=0.05, lr=0.002, norm_target=13.5, same_target=0, sim_target=0.532] Steps:   1% 43/3001 [01:11<1:04:48,  1.31s/it, _runtime=80, _timestamp=1.73e+9, loss=0.05, lr=0.002, norm_target=13.5, same_target=0, sim_target=0.532]Steps:   1% 43/3001 [01:11<1:04:48,  1.31s/it, _runtime=81, _timestamp=1.73e+9, loss=0.204, lr=0.002, norm_target=13.6, same_target=0, sim_target=0.527]Steps:   1% 44/3001 [01:12<1:04:38,  1.31s/it, _runtime=81, _timestamp=1.73e+9, loss=0.204, lr=0.002, norm_target=13.6, same_target=0, sim_target=0.527]Steps:   1% 44/3001 [01:12<1:04:38,  1.31s/it, _runtime=83, _timestamp=1.73e+9, loss=0.0175, lr=0.002, norm_target=13.7, same_target=0, sim_target=0.521]Steps:   1% 45/3001 [01:13<1:04:27,  1.31s/it, _runtime=83, _timestamp=1.73e+9, loss=0.0175, lr=0.002, norm_target=13.7, same_target=0, sim_target=0.521]Steps:   1% 45/3001 [01:13<1:04:27,  1.31s/it, _runtime=84, _timestamp=1.73e+9, loss=0.155, lr=0.002, norm_target=13.8, same_target=0, sim_target=0.515] Steps:   2% 46/3001 [01:15<1:04:19,  1.31s/it, _runtime=84, _timestamp=1.73e+9, loss=0.155, lr=0.002, norm_target=13.8, same_target=0, sim_target=0.515]Steps:   2% 46/3001 [01:15<1:04:19,  1.31s/it, _runtime=85, _timestamp=1.73e+9, loss=0.23, lr=0.002, norm_target=13.9, same_target=0, sim_target=0.508] Steps:   2% 47/3001 [01:16<1:04:10,  1.30s/it, _runtime=85, _timestamp=1.73e+9, loss=0.23, lr=0.002, norm_target=13.9, same_target=0, sim_target=0.508]Steps:   2% 47/3001 [01:16<1:04:10,  1.30s/it, _runtime=87, _timestamp=1.73e+9, loss=0.259, lr=0.002, norm_target=14, same_target=0, sim_target=0.5]   Steps:   2% 48/3001 [01:17<1:04:10,  1.30s/it, _runtime=87, _timestamp=1.73e+9, loss=0.259, lr=0.002, norm_target=14, same_target=0, sim_target=0.5]Steps:   2% 48/3001 [01:17<1:04:10,  1.30s/it, _runtime=88, _timestamp=1.73e+9, loss=0.0735, lr=0.002, norm_target=14.1, same_target=0, sim_target=0.494]Steps:   2% 49/3001 [01:19<1:04:10,  1.30s/it, _runtime=88, _timestamp=1.73e+9, loss=0.0735, lr=0.002, norm_target=14.1, same_target=0, sim_target=0.494]Steps:   2% 49/3001 [01:19<1:04:10,  1.30s/it, _runtime=89, _timestamp=1.73e+9, loss=0.125, lr=0.002, norm_target=14.2, same_target=0, sim_target=0.488] Steps:   2% 50/3001 [01:20<1:04:15,  1.31s/it, _runtime=89, _timestamp=1.73e+9, loss=0.125, lr=0.002, norm_target=14.2, same_target=0, sim_target=0.488]918263826 worker_seed
+918263824 worker_seed
+918263827 worker_seed
+918263825 worker_seed
+Generated
+Traceback (most recent call last):
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 1004, in <module>
+    main()
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 847, in main
+    caption_log_file=open(caption_log_path,'a')
+FileNotFoundError: [Errno 2] No such file or directory: 'saved_models/ti_models/single_reduced4_noprior_seed7777_rep2_qlab03/cat1/ti_qlab03_noprior_nomlm_cat1/src/log_captions.txt'
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: | 0.002 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: / 0.002 MB of 0.025 MB uploaded (0.000 MB deduped)wandb: - 0.002 MB of 0.025 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.025 MB uploaded (0.000 MB deduped)wandb: | 0.002 MB of 0.025 MB uploaded (0.000 MB deduped)wandb: / 0.025 MB of 0.025 MB uploaded (0.000 MB deduped)wandb: - 0.025 MB of 0.025 MB uploaded (0.000 MB deduped)wandb: \ 0.025 MB of 0.025 MB uploaded (0.000 MB deduped)wandb: | 0.025 MB of 0.025 MB uploaded (0.000 MB deduped)wandb: / 0.025 MB of 0.025 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:        loss ▁▂▃█▄▅▂▂▂▅█▃▄▄▃▆▃▆▂▄▃▂▂▅▆▂▂▅▄▃▃▇▃▅▂▁▃▅▅▃
+wandb:          lr ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: norm_target ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇████
+wandb: same_target ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  sim_target ████▇▇▇▆▆▆▆▅▅▅▅▅▄▄▄▄▄▄▃▃▃▃▃▂▂▂▂▂▂▂▂▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:        loss 0.12502
+wandb:          lr 0.002
+wandb: norm_target 14.20564
+wandb: same_target False
+wandb:  sim_target 0.48775
+wandb: 
+wandb: Synced generous-forest-926: https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE/runs/jmmob8zp
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240913_153654-jmmob8zp/logs
+Traceback (most recent call last):
+  File "/home/twkim/anaconda3/envs/context/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/accelerate_cli.py", line 47, in main
+    args.func(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 1023, in launch_command
+    simple_launcher(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 643, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/twkim/anaconda3/envs/context/bin/python', 'ti_train.py', '--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5', '--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/cat1', '--learnable_property=object', '--placeholder_token1=<cat1>', '--train_prior_concept1=cat', '--eval_prior_concept1=cat', '--resolution=512', '--train_batch_size=4', '--gradient_accumulation_steps=1', '--max_train_steps=3001', '--learning_rate=5e-4', '--lr_scheduler=constant', '--initializer_token=cat', '--normalize_mask_embeds=0', '--lr_warmup_steps=0', '--output_dir=saved_models/ti_models/single_reduced4_noprior_seed7777_rep2_qlab03/cat1', '--seed=7777', '--mask_tokens=[MASK]', '--lambda_mlm=0', '--freeze_mask_embedding=1', '--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt', '--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt', '--mask_prob=0.15', '--mlm_batch_size=25', '--scale_lr', '--eval_prompt_type=living', '--train_prompt_type=pet', '--silent=0', '--rev=0', '--mlm_target=masked', '--normalize_target1=0', '--caption_root=../datasets_pkgs/captions/v7', '--run_name=ti_qlab03_noprior_nomlm_cat1', '--report_to=wandb', '--project_name=TI MLM SINGLE', '--include_prior_concept=0']' returned non-zero exit status 1.

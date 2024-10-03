@@ -1,0 +1,51 @@
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.1+cu121 with CUDA 1201 (you have 2.1.1+cu118)
+    Python  3.9.18 (you have 3.9.19)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+cp: cannot stat 'datasets_pkgs': No such file or directory
+/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+results_ti/singlev0_prior_seed2940_rep1/dog6/tiv0_prior_mlm0001_dog6_mprob015_mbatch50_cap4_bgoutfit_add_pe_s3000_ppos0 exp_dir
+results_ti/singlev0_prior_seed2940_rep1/dog6/tiv0_prior_mlm0001_dog6_mprob015_mbatch50_cap4_bgoutfit_add_pe_s3000_ppos0/src/command.txt command_path
+generate_single.py item
+--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5 item
+--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/dog6 item
+--placeholder_token1=<dog6> item
+--prior_concept1=dog item
+--resolution=512 item
+--dst_exp_path=results_ti/singlev0_prior_seed2940_rep1/dog6/tiv0_prior_mlm0001_dog6_mprob015_mbatch50_cap4_bgoutfit_add_pe_s3000_ppos0 item
+--eval_batch_size=15 item
+--add_pe=1 item
+--num_images_per_prompt=8 item
+--output_dir=results_ti/singlev0_prior_seed2940_rep1/dog6 item
+--seed=2940 item
+--mask_tokens=[MASK] item
+--learned_embed_path1=saved_models/ti_models/singlev0_prior_seed2940_rep1/dog6/tiv0_prior_mlm0001_dog6_mprob015_mbatch50_cap4_bgoutfit_add_pe/checkpoints/learned_embeds_s3000.pt item
+--calibrate_ppos1=0 item
+--rev=0 item
+--prompt_type=dog item
+--include_prior_concept=1 item
+torch.Size([49410, 768]) token_embeds.shape
+32 norm_num_groups
+320 block_out_channels[0]
+32 norm_num_groups
+/home/twkim/project/rich_context/textual_inversion/./packages/diffusers/models/modeling_utils.py inspect
+unet param loaded
+Traceback (most recent call last):
+  File "/home/twkim/project/rich_context/textual_inversion/generate_single.py", line 833, in <module>
+    main(args)
+  File "/home/twkim/project/rich_context/textual_inversion/generate_single.py", line 367, in main
+    assert False
+AssertionError
+Traceback (most recent call last):
+  File "/home/twkim/anaconda3/envs/context/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/accelerate_cli.py", line 47, in main
+    args.func(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 1023, in launch_command
+    simple_launcher(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 643, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/twkim/anaconda3/envs/context/bin/python', 'generate_single.py', '--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5', '--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/dog6', '--placeholder_token1=<dog6>', '--prior_concept1=dog', '--resolution=512', '--dst_exp_path=results_ti/singlev0_prior_seed2940_rep1/dog6/tiv0_prior_mlm0001_dog6_mprob015_mbatch50_cap4_bgoutfit_add_pe_s3000_ppos0', '--eval_batch_size=15', '--add_pe=1', '--num_images_per_prompt=8', '--output_dir=results_ti/singlev0_prior_seed2940_rep1/dog6', '--seed=2940', '--mask_tokens=[MASK]', '--learned_embed_path1=saved_models/ti_models/singlev0_prior_seed2940_rep1/dog6/tiv0_prior_mlm0001_dog6_mprob015_mbatch50_cap4_bgoutfit_add_pe/checkpoints/learned_embeds_s3000.pt', '--calibrate_ppos1=0', '--rev=0', '--prompt_type=dog', '--include_prior_concept=1']' returned non-zero exit status 1.
