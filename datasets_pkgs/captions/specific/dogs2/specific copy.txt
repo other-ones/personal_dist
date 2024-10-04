@@ -1,0 +1,15 @@
+a man is petting <new1>
+a man is holding <new1>
+a boy is playing with <new1>
+a man is playing with <new1>
+a woman is petting <new1>
+a girl is petting <new1>
+a man is feeding <new1>
+a boy is feeding <new1>
+a girl is walking <new1>
+<new1> barking at a man.
+<new1> barking at a woman.
+<new1> barking at a boy.
+<new1> being petted by a man at a park.
+An image of <new1> walking on a leash beside a man.
+An image of <new1> walking on a leash beside a young man.
