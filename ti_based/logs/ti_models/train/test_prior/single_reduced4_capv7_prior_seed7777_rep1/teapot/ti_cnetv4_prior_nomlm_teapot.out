@@ -1,0 +1,126 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.15 (you have 1.4.11). Upgrade using: pip install --upgrade albumentations
+WARNING:xformers:WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.1+cu121 with CUDA 1201 (you have 2.1.1+cu118)
+    Python  3.9.18 (you have 3.9.19)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+wandb: Currently logged in as: tuk101234 (qlab-taewook). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.18.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.21
+wandb: Run data is saved locally in /home/twkim/project/rich_context/textual_inversion/wandb/run-20240913_043229-p6ztlb5r
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run distinctive-bee-863
+wandb: ⭐️ View project at https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE
+wandb: 🚀 View run at https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE/runs/p6ztlb5r
+[34m[1mwandb[0m: [33mWARNING[0m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+INFO:__main__:Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+
+/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+{'timestep_spacing', 'prediction_type', 'sample_max_value', 'dynamic_thresholding_ratio', 'clip_sample_range', 'variance_type', 'thresholding'} was not found in config. Values will be initialized to default values.
+{'scaling_factor'} was not found in config. Values will be initialized to default values.
+{'class_embed_type', 'conv_in_kernel', 'mid_block_only_cross_attention', 'upcast_attention', 'time_embedding_dim', 'time_embedding_act_fn', 'conv_out_kernel', 'dual_cross_attention', 'time_embedding_type', 'num_class_embeds', 'addition_embed_type', 'num_attention_heads', 'mid_block_type', 'class_embeddings_concat', 'transformer_layers_per_block', 'resnet_time_scale_shift', 'encoder_hid_dim_type', 'addition_time_embed_dim', 'encoder_hid_dim', 'cross_attention_norm', 'resnet_out_scale_factor', 'addition_embed_type_num_heads', 'timestep_post_act', 'use_linear_projection', 'only_cross_attention', 'time_cond_proj_dim', 'resnet_skip_time_act', 'projection_class_embeddings_input_dim'} was not found in config. Values will be initialized to default values.
+INFO:__main__:***** Running training *****
+INFO:__main__:  Num examples = 10000000
+INFO:__main__:  Num Epochs = 1
+INFO:__main__:  Instantaneous batch size per device = 4
+INFO:__main__:  Total train batch size (w. parallel, distributed & accumulation) = 4
+INFO:__main__:  Gradient Accumulation steps = 1
+INFO:__main__:  Total optimization steps = 3001
+set seed 7777
+saved_models/ti_models/single_reduced4_capv7_prior_seed7777_rep1/teapot/ti_cnetv4_prior_nomlm_teapot/src/command.txt command_path
+ti_train.py item
+--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5 item
+--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/teapot item
+--learnable_property=object item
+--placeholder_token1=<teapot> item
+--train_prior_concept1=teapot item
+--eval_prior_concept1=teapot item
+--resolution=512 item
+--train_batch_size=4 item
+--gradient_accumulation_steps=1 item
+--max_train_steps=3001 item
+--learning_rate=5e-4 item
+--lr_scheduler=constant item
+--initializer_token=teapot item
+--normalize_mask_embeds=0 item
+--lr_warmup_steps=0 item
+--output_dir=saved_models/ti_models/single_reduced4_capv7_prior_seed7777_rep1/teapot item
+--seed=7777 item
+--mask_tokens=[MASK] item
+--lambda_mlm=0 item
+--freeze_mask_embedding=1 item
+--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt item
+--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt item
+--mask_prob=0.25 item
+--mlm_batch_size=25 item
+--scale_lr item
+--eval_prompt_type=nonliving item
+--train_prompt_type=nonliving item
+--silent=0 item
+--rev=0 item
+--mlm_target=masked item
+--normalize_target1=0 item
+--caption_root=../datasets_pkgs/captions/v7 item
+--run_name=ti_cnetv4_prior_nomlm_teapot item
+--report_to=wandb item
+--project_name=TI MLM SINGLE item
+--include_prior_concept=1 item
+32 norm_num_groups
+320 block_out_channels[0]
+32 norm_num_groups
+text_model.embeddings.token_embedding.weight text_encoder requires
+None mask_token_ids
+seeded
+captions_nonliving_backgrounds	552
+captions_nonliving_creatives	117
+captions_nonliving_human_interactions	4176
+captions_nonliving_relations	29376
+captions_nonliving_styles	378
+seeded
+captions_nonliving_backgrounds	552
+captions_nonliving_creatives	117
+captions_nonliving_human_interactions	4176
+captions_nonliving_relations	29376
+captions_nonliving_styles	378
+Steps:   0% 0/3001 [00:00<?, ?it/s]True accepts_keep_fp32_wrapper
+{'keep_fp32_wrapper': True} extra_args
+Steps:   0% 1/3001 [00:04<3:31:08,  4.22s/it]918263826 worker_seed
+918263827 worker_seed
+918263825 worker_seed
+918263824 worker_seed
+Traceback (most recent call last):
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 1004, in <module>
+    main()
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 838, in main
+    torch.save(learned_embeds_dict, save_path)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/serialization.py", line 618, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/serialization.py", line 492, in _open_zipfile_writer
+    return container(name_or_buffer)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/serialization.py", line 463, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+RuntimeError: Parent directory saved_models/ti_models/single_reduced4_capv7_prior_seed7777_rep1/teapot/ti_cnetv4_prior_nomlm_teapot/checkpoints does not exist.
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: | 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: / 0.002 MB of 0.020 MB uploaded (0.000 MB deduped)wandb: - 0.002 MB of 0.024 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.024 MB uploaded (0.000 MB deduped)wandb: | 0.002 MB of 0.024 MB uploaded (0.000 MB deduped)wandb: / 0.012 MB of 0.024 MB uploaded (0.000 MB deduped)wandb: - 0.024 MB of 0.024 MB uploaded (0.000 MB deduped)wandb: \ 0.024 MB of 0.024 MB uploaded (0.000 MB deduped)wandb: | 0.024 MB of 0.024 MB uploaded (0.000 MB deduped)wandb: / 0.024 MB of 0.024 MB uploaded (0.000 MB deduped)wandb: - 0.024 MB of 0.024 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: Synced distinctive-bee-863: https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE/runs/p6ztlb5r
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240913_043229-p6ztlb5r/logs
+Traceback (most recent call last):
+  File "/home/twkim/anaconda3/envs/context/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/accelerate_cli.py", line 47, in main
+    args.func(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 1023, in launch_command
+    simple_launcher(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 643, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/twkim/anaconda3/envs/context/bin/python', 'ti_train.py', '--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5', '--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/teapot', '--learnable_property=object', '--placeholder_token1=<teapot>', '--train_prior_concept1=teapot', '--eval_prior_concept1=teapot', '--resolution=512', '--train_batch_size=4', '--gradient_accumulation_steps=1', '--max_train_steps=3001', '--learning_rate=5e-4', '--lr_scheduler=constant', '--initializer_token=teapot', '--normalize_mask_embeds=0', '--lr_warmup_steps=0', '--output_dir=saved_models/ti_models/single_reduced4_capv7_prior_seed7777_rep1/teapot', '--seed=7777', '--mask_tokens=[MASK]', '--lambda_mlm=0', '--freeze_mask_embedding=1', '--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt', '--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt', '--mask_prob=0.25', '--mlm_batch_size=25', '--scale_lr', '--eval_prompt_type=nonliving', '--train_prompt_type=nonliving', '--silent=0', '--rev=0', '--mlm_target=masked', '--normalize_target1=0', '--caption_root=../datasets_pkgs/captions/v7', '--run_name=ti_cnetv4_prior_nomlm_teapot', '--report_to=wandb', '--project_name=TI MLM SINGLE', '--include_prior_concept=1']' returned non-zero exit status 1.

@@ -1,0 +1,25 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.14 (you have 1.4.11). Upgrade using: pip install --upgrade albumentations
+WARNING:xformers:WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.1+cu121 with CUDA 1201 (you have 2.1.1+cu118)
+    Python  3.9.18 (you have 3.9.19)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+Traceback (most recent call last):
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 983, in <module>
+    main()
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 176, in main
+    torch.set_deterministic(True)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/__init__.py", line 1833, in __getattr__
+    raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+AttributeError: module 'torch' has no attribute 'set_deterministic'
+Traceback (most recent call last):
+  File "/home/twkim/anaconda3/envs/context/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/accelerate_cli.py", line 47, in main
+    args.func(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 1023, in launch_command
+    simple_launcher(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 643, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/twkim/anaconda3/envs/context/bin/python', 'ti_train.py', '--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5', '--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/teapot', '--learnable_property=object', '--placeholder_token1=<teapot>', '--use_det_alg=1', '--train_prior_concept1=teapot', '--eval_prior_concept1=teapot', '--resolution=512', '--train_batch_size=1', '--gradient_accumulation_steps=4', '--max_train_steps=301', '--learning_rate=5e-4', '--lr_scheduler=constant', '--normalize_mask_embeds=0', '--lr_warmup_steps=0', '--output_dir=saved_models/ti_models/single_capv7_prior_seed2940_rep_test4/teapot', '--seed=2940', '--mask_tokens=[MASK]', '--lambda_mlm=0.001', '--freeze_mask_embedding=1', '--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt', '--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt', '--mask_prob=0.15', '--mlm_target=masked', '--mlm_batch_size=25', '--scale_lr', '--eval_prompt_type=nonliving', '--train_prompt_type=nonliving', '--silent=0', '--rev=0', '--normalize_target1=0', '--caption_root=../datasets_pkgs/captions/v7', '--run_name=ti_cnetv4_prior_mlm0001_teapot_mprob015_mbatch25_use_det', '--include_prior_concept=1']' returned non-zero exit status 1.

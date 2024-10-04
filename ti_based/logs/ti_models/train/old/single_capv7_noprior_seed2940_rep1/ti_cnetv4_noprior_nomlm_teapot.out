@@ -1,0 +1,100 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.14 (you have 1.4.11). Upgrade using: pip install --upgrade albumentations
+WARNING:xformers:WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.1+cu121 with CUDA 1201 (you have 2.1.1+cu118)
+    Python  3.9.18 (you have 3.9.19)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+wandb: Currently logged in as: tuk101234 (qlab-taewook). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.9 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.21
+wandb: Run data is saved locally in /home/twkim/project/rich_context/textual_inversion/wandb/run-20240911_001030-wycn91e3
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run dandy-totem-523
+wandb: ⭐️ View project at https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE
+wandb: 🚀 View run at https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE/runs/wycn91e3
+[34m[1mwandb[0m: [33mWARNING[0m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+INFO:__main__:Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+
+/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+{'sample_max_value', 'variance_type', 'clip_sample_range', 'prediction_type', 'thresholding', 'dynamic_thresholding_ratio', 'timestep_spacing'} was not found in config. Values will be initialized to default values.
+{'scaling_factor'} was not found in config. Values will be initialized to default values.
+{'only_cross_attention', 'transformer_layers_per_block', 'timestep_post_act', 'mid_block_only_cross_attention', 'time_embedding_dim', 'mid_block_type', 'conv_out_kernel', 'conv_in_kernel', 'projection_class_embeddings_input_dim', 'use_linear_projection', 'resnet_skip_time_act', 'resnet_out_scale_factor', 'num_class_embeds', 'num_attention_heads', 'class_embed_type', 'time_embedding_type', 'addition_time_embed_dim', 'resnet_time_scale_shift', 'dual_cross_attention', 'encoder_hid_dim_type', 'encoder_hid_dim', 'addition_embed_type', 'cross_attention_norm', 'time_embedding_act_fn', 'class_embeddings_concat', 'upcast_attention', 'addition_embed_type_num_heads', 'time_cond_proj_dim'} was not found in config. Values will be initialized to default values.
+set seed 2940
+saved_models/ti_models/single_capv7_noprior_seed2940_rep1/teapot/ti_cnetv4_noprior_nomlm_teapot/src/command.txt command_path
+ti_train.py item
+--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5 item
+--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/teapot item
+--learnable_property=object item
+--placeholder_token1=<teapot> item
+--train_prior_concept1=teapot item
+--eval_prior_concept1=teapot item
+--resolution=512 item
+--train_batch_size=1 item
+--gradient_accumulation_steps=4 item
+--max_train_steps=3001 item
+--learning_rate=5e-4 item
+--lr_scheduler=constant item
+--normalize_mask_embeds=0 item
+--lr_warmup_steps=0 item
+--output_dir=saved_models/ti_models/single_capv7_noprior_seed2940_rep1/teapot item
+--seed=2940 item
+--mask_tokens=[MASK] item
+--lambda_mlm=0 item
+--freeze_mask_embedding=1 item
+--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt item
+--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt item
+--mask_prob=0.15 item
+--mlm_target=masked item
+--mlm_batch_size=25 item
+--scale_lr item
+--eval_prompt_type=nonliving item
+--train_prompt_type=nonliving item
+--silent=0 item
+--rev=0 item
+--normalize_target1=0 item
+--caption_root=../datasets_pkgs/captions/v7 item
+--run_name=ti_cnetv4_noprior_nomlm_teapot item
+--report_to=wandb item
+--project_name=TI MLM SINGLE item
+--include_prior_concept=0 item
+32 norm_num_groups
+320 block_out_channels[0]
+32 norm_num_groups
+Traceback (most recent call last):
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 988, in <module>
+    main()
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 307, in main
+    initializer_token_ids = tokenizer.encode(args.initializer_token, add_special_tokens=False)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/transformers/tokenization_utils_base.py", line 2577, in encode
+    encoded_inputs = self.encode_plus(
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/transformers/tokenization_utils_base.py", line 2985, in encode_plus
+    return self._encode_plus(
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/transformers/tokenization_utils.py", line 708, in _encode_plus
+    first_ids = get_input_ids(text)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/transformers/tokenization_utils.py", line 694, in get_input_ids
+    raise ValueError(
+ValueError: Input None is not valid. Should be a string, a list/tuple of strings or a list/tuple of integers.
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: | 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: / 0.002 MB of 0.023 MB uploaded (0.000 MB deduped)wandb: - 0.002 MB of 0.023 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.023 MB uploaded (0.000 MB deduped)wandb: | 0.023 MB of 0.023 MB uploaded (0.000 MB deduped)wandb: / 0.023 MB of 0.023 MB uploaded (0.000 MB deduped)wandb: - 0.023 MB of 0.023 MB uploaded (0.000 MB deduped)wandb: \ 0.023 MB of 0.023 MB uploaded (0.000 MB deduped)wandb: | 0.023 MB of 0.023 MB uploaded (0.000 MB deduped)wandb: / 0.023 MB of 0.023 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: Synced dandy-totem-523: https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE/runs/wycn91e3
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240911_001030-wycn91e3/logs
+Traceback (most recent call last):
+  File "/home/twkim/anaconda3/envs/context/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/accelerate_cli.py", line 47, in main
+    args.func(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 1023, in launch_command
+    simple_launcher(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 643, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/twkim/anaconda3/envs/context/bin/python', 'ti_train.py', '--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5', '--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/teapot', '--learnable_property=object', '--placeholder_token1=<teapot>', '--train_prior_concept1=teapot', '--eval_prior_concept1=teapot', '--resolution=512', '--train_batch_size=1', '--gradient_accumulation_steps=4', '--max_train_steps=3001', '--learning_rate=5e-4', '--lr_scheduler=constant', '--normalize_mask_embeds=0', '--lr_warmup_steps=0', '--output_dir=saved_models/ti_models/single_capv7_noprior_seed2940_rep1/teapot', '--seed=2940', '--mask_tokens=[MASK]', '--lambda_mlm=0', '--freeze_mask_embedding=1', '--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt', '--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt', '--mask_prob=0.15', '--mlm_target=masked', '--mlm_batch_size=25', '--scale_lr', '--eval_prompt_type=nonliving', '--train_prompt_type=nonliving', '--silent=0', '--rev=0', '--normalize_target1=0', '--caption_root=../datasets_pkgs/captions/v7', '--run_name=ti_cnetv4_noprior_nomlm_teapot', '--report_to=wandb', '--project_name=TI MLM SINGLE', '--include_prior_concept=0']' returned non-zero exit status 1.

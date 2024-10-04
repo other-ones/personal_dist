@@ -1,0 +1,184 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.14 (you have 1.4.11). Upgrade using: pip install --upgrade albumentations
+WARNING:xformers:WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.1+cu121 with CUDA 1201 (you have 2.1.1+cu118)
+    Python  3.9.18 (you have 3.9.19)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+INFO:__main__:Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+
+/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+{'sample_max_value', 'timestep_spacing', 'thresholding', 'clip_sample_range', 'variance_type', 'prediction_type', 'dynamic_thresholding_ratio'} was not found in config. Values will be initialized to default values.
+{'scaling_factor'} was not found in config. Values will be initialized to default values.
+{'time_embedding_type', 'conv_out_kernel', 'class_embed_type', 'encoder_hid_dim', 'num_class_embeds', 'time_embedding_act_fn', 'use_linear_projection', 'addition_embed_type_num_heads', 'conv_in_kernel', 'addition_time_embed_dim', 'resnet_out_scale_factor', 'resnet_time_scale_shift', 'dual_cross_attention', 'time_cond_proj_dim', 'projection_class_embeddings_input_dim', 'transformer_layers_per_block', 'resnet_skip_time_act', 'mid_block_only_cross_attention', 'time_embedding_dim', 'upcast_attention', 'addition_embed_type', 'mid_block_type', 'class_embeddings_concat', 'encoder_hid_dim_type', 'timestep_post_act', 'only_cross_attention', 'cross_attention_norm', 'num_attention_heads'} was not found in config. Values will be initialized to default values.
+INFO:__main__:***** Running training *****
+INFO:__main__:  Num examples = 10000000
+INFO:__main__:  Num Epochs = 1
+INFO:__main__:  Instantaneous batch size per device = 1
+INFO:__main__:  Total train batch size (w. parallel, distributed & accumulation) = 4
+INFO:__main__:  Gradient Accumulation steps = 4
+INFO:__main__:  Total optimization steps = 3001
+set seed 2940
+saved_models/ti_models/single_capv7_prior_seed2940_rep1/duck_toy/ti_cnetv4_prior_mlm00001_duck_toy_mprob015_mbatch25/src/command.txt command_path
+ti_train.py item
+--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5 item
+--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/duck_toy item
+--learnable_property=object item
+--placeholder_token1=<duck_toy> item
+--train_prior_concept1=duck item
+--eval_prior_concept1=duck toy item
+--resolution=512 item
+--train_batch_size=1 item
+--gradient_accumulation_steps=4 item
+--max_train_steps=3001 item
+--learning_rate=5e-4 item
+--lr_scheduler=constant item
+--normalize_mask_embeds=0 item
+--lr_warmup_steps=0 item
+--output_dir=saved_models/ti_models/single_capv7_prior_seed2940_rep1/duck_toy item
+--seed=2940 item
+--mask_tokens=[MASK] item
+--lambda_mlm=0.0001 item
+--freeze_mask_embedding=1 item
+--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt item
+--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt item
+--mask_prob=0.15 item
+--mlm_target=masked item
+--mlm_batch_size=25 item
+--scale_lr item
+--eval_prompt_type=nonliving item
+--train_prompt_type=nonliving item
+--silent=0 item
+--rev=0 item
+--normalize_target1=0 item
+--caption_root=../datasets_pkgs/captions/v7 item
+--run_name=ti_cnetv4_prior_mlm00001_duck_toy_mprob015_mbatch25 item
+--include_prior_concept=1 item
+32 norm_num_groups
+320 block_out_channels[0]
+32 norm_num_groups
+[49409] mask_token_ids
+seeded
+captions_nonliving_relations	29376
+captions_nonliving_styles	378
+captions_nonliving_human_interactions	4176
+captions_nonliving_backgrounds	552
+captions_nonliving_creatives	117
+seeded
+captions_nonliving_relations	29376
+captions_nonliving_styles	378
+captions_nonliving_human_interactions	4176
+captions_nonliving_backgrounds	552
+captions_nonliving_creatives	117
+position_ids defined_key-clsnet
+final.weight defined_key-clsnet
+final.bias defined_key-clsnet
+position_embedding.weight defined_key-clsnet
+multi_head_attention1.in_proj_weight defined_key-clsnet
+multi_head_attention1.in_proj_bias defined_key-clsnet
+multi_head_attention1.out_proj.weight defined_key-clsnet
+multi_head_attention1.out_proj.bias defined_key-clsnet
+feed_forward1.W_ff1.weight defined_key-clsnet
+feed_forward1.W_ff1.bias defined_key-clsnet
+feed_forward1.W_ff2.weight defined_key-clsnet
+feed_forward1.W_ff2.bias defined_key-clsnet
+layer_norm1.weight defined_key-clsnet
+layer_norm1.bias defined_key-clsnet
+multi_head_attention2.in_proj_weight defined_key-clsnet
+multi_head_attention2.in_proj_bias defined_key-clsnet
+multi_head_attention2.out_proj.weight defined_key-clsnet
+multi_head_attention2.out_proj.bias defined_key-clsnet
+layer_norm2.weight defined_key-clsnet
+layer_norm2.bias defined_key-clsnet
+
+module.position_ids saved_key-clsnet
+module.final.weight saved_key-clsnet
+module.final.bias saved_key-clsnet
+module.position_embedding.weight saved_key-clsnet
+module.multi_head_attention1.in_proj_weight saved_key-clsnet
+module.multi_head_attention1.in_proj_bias saved_key-clsnet
+module.multi_head_attention1.out_proj.weight saved_key-clsnet
+module.multi_head_attention1.out_proj.bias saved_key-clsnet
+module.feed_forward1.W_ff1.weight saved_key-clsnet
+module.feed_forward1.W_ff1.bias saved_key-clsnet
+module.feed_forward1.W_ff2.weight saved_key-clsnet
+module.feed_forward1.W_ff2.bias saved_key-clsnet
+module.layer_norm1.weight saved_key-clsnet
+module.layer_norm1.bias saved_key-clsnet
+module.multi_head_attention2.in_proj_weight saved_key-clsnet
+module.multi_head_attention2.in_proj_bias saved_key-clsnet
+module.multi_head_attention2.out_proj.weight saved_key-clsnet
+module.multi_head_attention2.out_proj.bias saved_key-clsnet
+module.layer_norm2.weight saved_key-clsnet
+module.layer_norm2.bias saved_key-clsnet
+Steps:   0%|          | 0/3001 [00:00<?, ?it/s]True accepts_keep_fp32_wrapper
+{'keep_fp32_wrapper': True} extra_args
+INFO:__main__:STEP 0 Running validation... 
+ Generating 8 images with prompt: ['a <duck_toy> duck in the jungle', 'a <duck_toy> duck with a city in the background', 'a <duck_toy> duck with a mountain in the background', 'a <duck_toy> duck with the Eiffel Tower in the background', 'a <duck_toy> duck floating on top of water', 'a <duck_toy> duck floating in an ocean of milk', 'a <duck_toy> duck on top of the sidewalk in a crowded street', 'a cube shaped <duck_toy> duck'].
+
+
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+Step		|0
+Raw		|vincent    van        gogh       is         M[auc]     tioning    <duck_toy> duck      
+Masked		|vincent    van        gogh       is         [MASK]     tioning    <duck_toy> duck      
+Preds		|an         hand       gogh       is         M[ni]      ating      duck       duck      
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+
+  0%|          | 0/25 [00:00<?, ?it/s][A
+  4%|▍         | 1/25 [00:00<00:09,  2.58it/s][A
+  8%|▊         | 2/25 [00:00<00:08,  2.77it/s][A
+ 12%|█▏        | 3/25 [00:01<00:07,  2.84it/s][A
+ 16%|█▌        | 4/25 [00:01<00:07,  2.87it/s][A
+ 20%|██        | 5/25 [00:01<00:06,  2.89it/s][A
+ 24%|██▍       | 6/25 [00:02<00:06,  2.90it/s][A
+ 28%|██▊       | 7/25 [00:02<00:06,  2.91it/s][A
+ 32%|███▏      | 8/25 [00:02<00:05,  2.91it/s][A
+ 36%|███▌      | 9/25 [00:03<00:05,  2.92it/s][A
+ 40%|████      | 10/25 [00:03<00:05,  2.92it/s][A
+ 44%|████▍     | 11/25 [00:03<00:04,  2.92it/s][A
+ 48%|████▊     | 12/25 [00:04<00:04,  2.92it/s][A
+ 52%|█████▏    | 13/25 [00:04<00:04,  2.92it/s][A
+ 56%|█████▌    | 14/25 [00:04<00:03,  2.92it/s][A
+ 60%|██████    | 15/25 [00:05<00:03,  2.92it/s][A
+ 64%|██████▍   | 16/25 [00:05<00:03,  2.92it/s][A
+ 68%|██████▊   | 17/25 [00:05<00:02,  2.92it/s][A
+ 72%|███████▏  | 18/25 [00:06<00:02,  2.92it/s][A
+ 76%|███████▌  | 19/25 [00:06<00:02,  2.92it/s][A
+ 80%|████████  | 20/25 [00:06<00:01,  2.93it/s][A
+ 84%|████████▍ | 21/25 [00:07<00:01,  2.93it/s][A
+ 88%|████████▊ | 22/25 [00:07<00:01,  2.93it/s][A
+ 92%|█████████▏| 23/25 [00:07<00:00,  2.93it/s][A
+ 96%|█████████▌| 24/25 [00:08<00:00,  2.94it/s][A
+100%|██████████| 25/25 [00:08<00:00,  2.94it/s][A100%|██████████| 25/25 [00:09<00:00,  2.65it/s]
+Steps:   0%|          | 0/3001 [00:18<?, ?it/s, loss=0.197, loss_mlm=1.05, lr=0.002, norm_mask=8.02, norm_target=8.62]Steps:   0%|          | 1/3001 [00:18<15:37:32, 18.75s/it, loss=0.197, loss_mlm=1.05, lr=0.002, norm_mask=8.02, norm_target=8.62]Steps:   0%|          | 1/3001 [00:20<15:37:32, 18.75s/it, loss=0.694, loss_mlm=1.16, lr=0.002, norm_mask=8.02, norm_target=8.62]Steps:   0%|          | 2/3001 [00:20<7:06:04,  8.52s/it, loss=0.694, loss_mlm=1.16, lr=0.002, norm_mask=8.02, norm_target=8.62] Steps:   0%|          | 2/3001 [00:21<7:06:04,  8.52s/it, loss=0.121, loss_mlm=0.892, lr=0.002, norm_mask=8.02, norm_target=8.62]Steps:   0%|          | 3/3001 [00:21<4:18:32,  5.17s/it, loss=0.121, loss_mlm=0.892, lr=0.002, norm_mask=8.02, norm_target=8.62]Steps:   0%|          | 3/3001 [00:22<4:18:32,  5.17s/it, loss=0.00387, loss_mlm=0.788, lr=0.002, norm_mask=8.02, norm_target=8.71]Steps:   0%|          | 4/3001 [00:22<3:00:02,  3.60s/it, loss=0.00387, loss_mlm=0.788, lr=0.002, norm_mask=8.02, norm_target=8.71]Steps:   0%|          | 4/3001 [00:23<3:00:02,  3.60s/it, loss=0.00541, loss_mlm=1.29, lr=0.002, norm_mask=8.02, norm_target=8.71] Steps:   0%|          | 5/3001 [00:23<2:16:30,  2.73s/it, loss=0.00541, loss_mlm=1.29, lr=0.002, norm_mask=8.02, norm_target=8.71]Steps:   0%|          | 5/3001 [00:24<2:16:30,  2.73s/it, loss=0.005, loss_mlm=0.831, lr=0.002, norm_mask=8.02, norm_target=8.71] Steps:   0%|          | 6/3001 [00:24<1:50:16,  2.21s/it, loss=0.005, loss_mlm=0.831, lr=0.002, norm_mask=8.02, norm_target=8.71]Steps:   0%|          | 6/3001 [00:26<1:50:16,  2.21s/it, loss=0.0336, loss_mlm=0.977, lr=0.002, norm_mask=8.02, norm_target=8.71]Steps:   0%|          | 7/3001 [00:26<1:33:29,  1.87s/it, loss=0.0336, loss_mlm=0.977, lr=0.002, norm_mask=8.02, norm_target=8.71]Steps:   0%|          | 7/3001 [00:27<1:33:29,  1.87s/it, loss=0.26, loss_mlm=1.03, lr=0.002, norm_mask=8.02, norm_target=8.87]   Steps:   0%|          | 8/3001 [00:27<1:22:39,  1.66s/it, loss=0.26, loss_mlm=1.03, lr=0.002, norm_mask=8.02, norm_target=8.87]Steps:   0%|          | 8/3001 [00:28<1:22:39,  1.66s/it, loss=0.232, loss_mlm=1.19, lr=0.002, norm_mask=8.02, norm_target=8.87]Steps:   0%|          | 9/3001 [00:28<1:15:18,  1.51s/it, loss=0.232, loss_mlm=1.19, lr=0.002, norm_mask=8.02, norm_target=8.87]Steps:   0%|          | 9/3001 [00:29<1:15:18,  1.51s/it, loss=0.259, loss_mlm=0.777, lr=0.002, norm_mask=8.02, norm_target=8.87]Steps:   0%|          | 10/3001 [00:29<1:10:10,  1.41s/it, loss=0.259, loss_mlm=0.777, lr=0.002, norm_mask=8.02, norm_target=8.87]Steps:   0%|          | 10/3001 [00:30<1:10:10,  1.41s/it, loss=0.019, loss_mlm=1.16, lr=0.002, norm_mask=8.02, norm_target=8.87] Steps:   0%|          | 11/3001 [00:30<1:06:40,  1.34s/it, loss=0.019, loss_mlm=1.16, lr=0.002, norm_mask=8.02, norm_target=8.87]Steps:   0%|          | 11/3001 [00:31<1:06:40,  1.34s/it, loss=0.289, loss_mlm=1.07, lr=0.002, norm_mask=8.02, norm_target=9.03]Steps:   0%|          | 12/3001 [00:31<1:04:17,  1.29s/it, loss=0.289, loss_mlm=1.07, lr=0.002, norm_mask=8.02, norm_target=9.03]Steps:   0%|          | 12/3001 [00:33<1:04:17,  1.29s/it, loss=0.141, loss_mlm=0.94, lr=0.002, norm_mask=8.02, norm_target=9.03]Steps:   0%|          | 13/3001 [00:33<1:02:29,  1.25s/it, loss=0.141, loss_mlm=0.94, lr=0.002, norm_mask=8.02, norm_target=9.03]Steps:   0%|          | 13/3001 [00:34<1:02:29,  1.25s/it, loss=0.105, loss_mlm=1.26, lr=0.002, norm_mask=8.02, norm_target=9.03]Steps:   0%|          | 14/3001 [00:34<1:01:25,  1.23s/it, loss=0.105, loss_mlm=1.26, lr=0.002, norm_mask=8.02, norm_target=9.03]Steps:   0%|          | 14/3001 [00:35<1:01:25,  1.23s/it, loss=0.0132, loss_mlm=0.784, lr=0.002, norm_mask=8.02, norm_target=9.03]Steps:   0%|          | 15/3001 [00:35<1:00:36,  1.22s/it, loss=0.0132, loss_mlm=0.784, lr=0.002, norm_mask=8.02, norm_target=9.03]Steps:   0%|          | 15/3001 [00:36<1:00:36,  1.22s/it, loss=0.0146, loss_mlm=1.24, lr=0.002, norm_mask=8.02, norm_target=9.22] Steps:   1%|          | 16/3001 [00:36<1:00:05,  1.21s/it, loss=0.0146, loss_mlm=1.24, lr=0.002, norm_mask=8.02, norm_target=9.22]Steps:   1%|          | 16/3001 [00:38<1:00:05,  1.21s/it, loss=0.0202, loss_mlm=0.853, lr=0.002, norm_mask=8.02, norm_target=9.22]Steps:   1%|          | 17/3001 [00:38<1:03:42,  1.28s/it, loss=0.0202, loss_mlm=0.853, lr=0.002, norm_mask=8.02, norm_target=9.22]Steps:   1%|          | 17/3001 [00:39<1:03:42,  1.28s/it, loss=0.246, loss_mlm=1.13, lr=0.002, norm_mask=8.02, norm_target=9.22]  Steps:   1%|          | 18/3001 [00:39<1:02:22,  1.25s/it, loss=0.246, loss_mlm=1.13, lr=0.002, norm_mask=8.02, norm_target=9.22]Steps:   1%|          | 18/3001 [00:40<1:02:22,  1.25s/it, loss=0.0149, loss_mlm=1.26, lr=0.002, norm_mask=8.02, norm_target=9.22]Steps:   1%|          | 19/3001 [00:40<1:01:17,  1.23s/it, loss=0.0149, loss_mlm=1.26, lr=0.002, norm_mask=8.02, norm_target=9.22]Steps:   1%|          | 19/3001 [00:41<1:01:17,  1.23s/it, loss=0.00289, loss_mlm=0.784, lr=0.002, norm_mask=8.02, norm_target=9.4]Steps:   1%|          | 20/3001 [00:41<1:00:39,  1.22s/it, loss=0.00289, loss_mlm=0.784, lr=0.002, norm_mask=8.02, norm_target=9.4]Steps:   1%|          | 20/3001 [00:42<1:00:39,  1.22s/it, loss=0.0984, loss_mlm=0.928, lr=0.002, norm_mask=8.02, norm_target=9.4] Steps:   1%|          | 21/3001 [00:42<1:00:01,  1.21s/it, loss=0.0984, loss_mlm=0.928, lr=0.002, norm_mask=8.02, norm_target=9.4]Steps:   1%|          | 21/3001 [00:44<1:00:01,  1.21s/it, loss=0.305, loss_mlm=0.898, lr=0.002, norm_mask=8.02, norm_target=9.4] Steps:   1%|          | 22/3001 [00:44<59:35,  1.20s/it, loss=0.305, loss_mlm=0.898, lr=0.002, norm_mask=8.02, norm_target=9.4]  Steps:   1%|          | 22/3001 [00:45<59:35,  1.20s/it, loss=0.0936, loss_mlm=0.763, lr=0.002, norm_mask=8.02, norm_target=9.4]Steps:   1%|          | 23/3001 [00:45<59:18,  1.19s/it, loss=0.0936, loss_mlm=0.763, lr=0.002, norm_mask=8.02, norm_target=9.4]Steps:   1%|          | 23/3001 [00:46<59:18,  1.19s/it, loss=0.107, loss_mlm=0.859, lr=0.002, norm_mask=8.02, norm_target=9.55]Steps:   1%|          | 24/3001 [00:46<59:05,  1.19s/it, loss=0.107, loss_mlm=0.859, lr=0.002, norm_mask=8.02, norm_target=9.55]Steps:   1%|          | 24/3001 [00:47<59:05,  1.19s/it, loss=0.154, loss_mlm=0.814, lr=0.002, norm_mask=8.02, norm_target=9.55]Steps:   1%|          | 25/3001 [00:47<59:09,  1.19s/it, loss=0.154, loss_mlm=0.814, lr=0.002, norm_mask=8.02, norm_target=9.55]Steps:   1%|          | 25/3001 [00:48<59:09,  1.19s/it, loss=0.0169, loss_mlm=1.15, lr=0.002, norm_mask=8.02, norm_target=9.55]Steps:   1%|          | 26/3001 [00:48<59:05,  1.19s/it, loss=0.0169, loss_mlm=1.15, lr=0.002, norm_mask=8.02, norm_target=9.55]Steps:   1%|          | 26/3001 [00:50<59:05,  1.19s/it, loss=0.0215, loss_mlm=1.07, lr=0.002, norm_mask=8.02, norm_target=9.55]Steps:   1%|          | 27/3001 [00:50<58:57,  1.19s/it, loss=0.0215, loss_mlm=1.07, lr=0.002, norm_mask=8.02, norm_target=9.55]Steps:   1%|          | 27/3001 [00:51<58:57,  1.19s/it, loss=0.0197, loss_mlm=0.642, lr=0.002, norm_mask=8.02, norm_target=9.69]Steps:   1%|          | 28/3001 [00:51<59:02,  1.19s/it, loss=0.0197, loss_mlm=0.642, lr=0.002, norm_mask=8.02, norm_target=9.69]Steps:   1%|          | 28/3001 [00:52<59:02,  1.19s/it, loss=0.321, loss_mlm=0.756, lr=0.002, norm_mask=8.02, norm_target=9.69] Steps:   1%|          | 29/3001 [00:52<59:02,  1.19s/it, loss=0.321, loss_mlm=0.756, lr=0.002, norm_mask=8.02, norm_target=9.69]Steps:   1%|          | 29/3001 [00:53<59:02,  1.19s/it, loss=0.147, loss_mlm=1.12, lr=0.002, norm_mask=8.02, norm_target=9.69] Steps:   1%|          | 30/3001 [00:53<58:50,  1.19s/it, loss=0.147, loss_mlm=1.12, lr=0.002, norm_mask=8.02, norm_target=9.69]Steps:   1%|          | 30/3001 [00:54<58:50,  1.19s/it, loss=0.355, loss_mlm=1.13, lr=0.002, norm_mask=8.02, norm_target=9.69]Steps:   1%|          | 31/3001 [00:54<58:47,  1.19s/it, loss=0.355, loss_mlm=1.13, lr=0.002, norm_mask=8.02, norm_target=9.69]Steps:   1%|          | 31/3001 [00:55<58:47,  1.19s/it, loss=0.127, loss_mlm=0.645, lr=0.002, norm_mask=8.02, norm_target=9.82]Steps:   1%|          | 32/3001 [00:55<58:40,  1.19s/it, loss=0.127, loss_mlm=0.645, lr=0.002, norm_mask=8.02, norm_target=9.82]Steps:   1%|          | 32/3001 [00:57<58:40,  1.19s/it, loss=0.288, loss_mlm=1.25, lr=0.002, norm_mask=8.02, norm_target=9.82] Steps:   1%|          | 33/3001 [00:57<58:36,  1.18s/it, loss=0.288, loss_mlm=1.25, lr=0.002, norm_mask=8.02, norm_target=9.82]Steps:   1%|          | 33/3001 [00:58<58:36,  1.18s/it, loss=0.068, loss_mlm=0.923, lr=0.002, norm_mask=8.02, norm_target=9.82]Steps:   1%|          | 34/3001 [00:58<58:34,  1.18s/it, loss=0.068, loss_mlm=0.923, lr=0.002, norm_mask=8.02, norm_target=9.82]Steps:   1%|          | 34/3001 [00:59<58:34,  1.18s/it, loss=0.0374, loss_mlm=0.751, lr=0.002, norm_mask=8.02, norm_target=9.82]Steps:   1%|          | 35/3001 [00:59<58:34,  1.18s/it, loss=0.0374, loss_mlm=0.751, lr=0.002, norm_mask=8.02, norm_target=9.82]Steps:   1%|          | 35/3001 [01:00<58:34,  1.18s/it, loss=0.0871, loss_mlm=1.18, lr=0.002, norm_mask=8.02, norm_target=9.95] Steps:   1%|          | 36/3001 [01:00<58:35,  1.19s/it, loss=0.0871, loss_mlm=1.18, lr=0.002, norm_mask=8.02, norm_target=9.95]Steps:   1%|          | 36/3001 [01:01<58:35,  1.19s/it, loss=0.00874, loss_mlm=0.815, lr=0.002, norm_mask=8.02, norm_target=9.95]Steps:   1%|          | 37/3001 [01:01<58:35,  1.19s/it, loss=0.00874, loss_mlm=0.815, lr=0.002, norm_mask=8.02, norm_target=9.95]Steps:   1%|          | 37/3001 [01:03<58:35,  1.19s/it, loss=0.0344, loss_mlm=0.952, lr=0.002, norm_mask=8.02, norm_target=9.95] Steps:   1%|▏         | 38/3001 [01:03<1:03:10,  1.28s/it, loss=0.0344, loss_mlm=0.952, lr=0.002, norm_mask=8.02, norm_target=9.95]Steps:   1%|▏         | 38/3001 [01:04<1:03:10,  1.28s/it, loss=0.0133, loss_mlm=0.914, lr=0.002, norm_mask=8.02, norm_target=9.95]Steps:   1%|▏         | 39/3001 [01:04<1:01:52,  1.25s/it, loss=0.0133, loss_mlm=0.914, lr=0.002, norm_mask=8.02, norm_target=9.95]Steps:   1%|▏         | 39/3001 [01:05<1:01:52,  1.25s/it, loss=0.0485, loss_mlm=1.27, lr=0.002, norm_mask=8.02, norm_target=10.1] Steps:   1%|▏         | 40/3001 [01:05<1:01:07,  1.24s/it, loss=0.0485, loss_mlm=1.27, lr=0.002, norm_mask=8.02, norm_target=10.1]Steps:   1%|▏         | 40/3001 [01:06<1:01:07,  1.24s/it, loss=0.00589, loss_mlm=0.788, lr=0.002, norm_mask=8.02, norm_target=10.1]Steps:   1%|▏         | 41/3001 [01:06<1:00:19,  1.22s/it, loss=0.00589, loss_mlm=0.788, lr=0.002, norm_mask=8.02, norm_target=10.1]Steps:   1%|▏         | 41/3001 [01:08<1:00:19,  1.22s/it, loss=0.0821, loss_mlm=0.942, lr=0.002, norm_mask=8.02, norm_target=10.1] Steps:   1%|▏         | 42/3001 [01:08<59:45,  1.21s/it, loss=0.0821, loss_mlm=0.942, lr=0.002, norm_mask=8.02, norm_target=10.1]  Steps:   1%|▏         | 42/3001 [01:09<59:45,  1.21s/it, loss=0.446, loss_mlm=1, lr=0.002, norm_mask=8.02, norm_target=10.1]     Steps:   1%|▏         | 43/3001 [01:09<59:23,  1.20s/it, loss=0.446, loss_mlm=1, lr=0.002, norm_mask=8.02, norm_target=10.1]Steps:   1%|▏         | 43/3001 [01:10<59:23,  1.20s/it, loss=0.00389, loss_mlm=1.02, lr=0.002, norm_mask=8.02, norm_target=10.2]Steps:   1%|▏         | 44/3001 [01:10<59:05,  1.20s/it, loss=0.00389, loss_mlm=1.02, lr=0.002, norm_mask=8.02, norm_target=10.2]Steps:   1%|▏         | 44/3001 [01:11<59:05,  1.20s/it, loss=0.0122, loss_mlm=0.92, lr=0.002, norm_mask=8.02, norm_target=10.2] Steps:   1%|▏         | 45/3001 [01:11<59:14,  1.20s/it, loss=0.0122, loss_mlm=0.92, lr=0.002, norm_mask=8.02, norm_target=10.2]Steps:   1%|▏         | 45/3001 [01:12<59:14,  1.20s/it, loss=0.00492, loss_mlm=0.632, lr=0.002, norm_mask=8.02, norm_target=10.2]Steps:   2%|▏         | 46/3001 [01:12<59:03,  1.20s/it, loss=0.00492, loss_mlm=0.632, lr=0.002, norm_mask=8.02, norm_target=10.2]Steps:   2%|▏         | 46/3001 [01:14<59:03,  1.20s/it, loss=0.00765, loss_mlm=0.883, lr=0.002, norm_mask=8.02, norm_target=10.2]Steps:   2%|▏         | 47/3001 [01:14<58:55,  1.20s/it, loss=0.00765, loss_mlm=0.883, lr=0.002, norm_mask=8.02, norm_target=10.2]Steps:   2%|▏         | 47/3001 [01:15<58:55,  1.20s/it, loss=0.441, loss_mlm=1.12, lr=0.002, norm_mask=8.02, norm_target=10.3]   Steps:   2%|▏         | 48/3001 [01:15<59:00,  1.20s/it, loss=0.441, loss_mlm=1.12, lr=0.002, norm_mask=8.02, norm_target=10.3]Steps:   2%|▏         | 48/3001 [01:16<59:00,  1.20s/it, loss=0.00234, loss_mlm=1.05, lr=0.002, norm_mask=8.02, norm_target=10.3]Steps:   2%|▏         | 49/3001 [01:16<59:03,  1.20s/it, loss=0.00234, loss_mlm=1.05, lr=0.002, norm_mask=8.02, norm_target=10.3]Steps:   2%|▏         | 49/3001 [01:17<59:03,  1.20s/it, loss=0.00297, loss_mlm=1.15, lr=0.002, norm_mask=8.02, norm_target=10.3]Steps:   2%|▏         | 50/3001 [01:17<58:48,  1.20s/it, loss=0.00297, loss_mlm=1.15, lr=0.002, norm_mask=8.02, norm_target=10.3]Steps:   2%|▏         | 50/3001 [01:18<58:48,  1.20s/it, loss=0.00948, loss_mlm=0.913, lr=0.002, norm_mask=8.02, norm_target=10.3]Steps:   2%|▏         | 51/3001 [01:18<58:42,  1.19s/it, loss=0.00948, loss_mlm=0.913, lr=0.002, norm_mask=8.02, norm_target=10.3]Steps:   2%|▏         | 51/3001 [01:20<58:42,  1.19s/it, loss=0.462, loss_mlm=1.21, lr=0.002, norm_mask=8.02, norm_target=10.4]   Steps:   2%|▏         | 52/3001 [01:20<59:15,  1.21s/it, loss=0.462, loss_mlm=1.21, lr=0.002, norm_mask=8.02, norm_target=10.4]Steps:   2%|▏         | 52/3001 [01:21<59:15,  1.21s/it, loss=0.00313, loss_mlm=1.34, lr=0.002, norm_mask=8.02, norm_target=10.4]Steps:   2%|▏         | 53/3001 [01:21<59:39,  1.21s/it, loss=0.00313, loss_mlm=1.34, lr=0.002, norm_mask=8.02, norm_target=10.4]Steps:   2%|▏         | 53/3001 [01:22<59:39,  1.21s/it, loss=0.00309, loss_mlm=0.872, lr=0.002, norm_mask=8.02, norm_target=10.4]Steps:   2%|▏         | 54/3001 [01:22<59:28,  1.21s/it, loss=0.00309, loss_mlm=0.872, lr=0.002, norm_mask=8.02, norm_target=10.4]Steps:   2%|▏         | 54/3001 [01:23<59:28,  1.21s/it, loss=0.0787, loss_mlm=1.01, lr=0.002, norm_mask=8.02, norm_target=10.4]  Steps:   2%|▏         | 55/3001 [01:23<59:20,  1.21s/it, loss=0.0787, loss_mlm=1.01, lr=0.002, norm_mask=8.02, norm_target=10.4]Steps:   2%|▏         | 55/3001 [01:24<59:20,  1.21s/it, loss=0.463, loss_mlm=1.11, lr=0.002, norm_mask=8.02, norm_target=10.5] Steps:   2%|▏         | 56/3001 [01:24<59:17,  1.21s/it, loss=0.463, loss_mlm=1.11, lr=0.002, norm_mask=8.02, norm_target=10.5]Steps:   2%|▏         | 56/3001 [01:26<59:17,  1.21s/it, loss=0.441, loss_mlm=1.05, lr=0.002, norm_mask=8.02, norm_target=10.5]Steps:   2%|▏         | 57/3001 [01:26<58:57,  1.20s/it, loss=0.441, loss_mlm=1.05, lr=0.002, norm_mask=8.02, norm_target=10.5]Steps:   2%|▏         | 57/3001 [01:27<58:57,  1.20s/it, loss=0.125, loss_mlm=1.26, lr=0.002, norm_mask=8.02, norm_target=10.5]Steps:   2%|▏         | 58/3001 [01:27<59:19,  1.21s/it, loss=0.125, loss_mlm=1.26, lr=0.002, norm_mask=8.02, norm_target=10.5]Steps:   2%|▏         | 58/3001 [01:28<59:19,  1.21s/it, loss=0.0535, loss_mlm=1.24, lr=0.002, norm_mask=8.02, norm_target=10.5]Steps:   2%|▏         | 59/3001 [01:28<1:04:07,  1.31s/it, loss=0.0535, loss_mlm=1.24, lr=0.002, norm_mask=8.02, norm_target=10.5]Steps:   2%|▏         | 59/3001 [01:30<1:04:07,  1.31s/it, loss=0.0144, loss_mlm=1.22, lr=0.002, norm_mask=8.02, norm_target=10.6]Steps:   2%|▏         | 60/3001 [01:30<1:02:17,  1.27s/it, loss=0.0144, loss_mlm=1.22, lr=0.002, norm_mask=8.02, norm_target=10.6]Steps:   2%|▏         | 60/3001 [01:31<1:02:17,  1.27s/it, loss=0.0236, loss_mlm=1.26, lr=0.002, norm_mask=8.02, norm_target=10.6]Steps:   2%|▏         | 61/3001 [01:31<1:01:02,  1.25s/it, loss=0.0236, loss_mlm=1.26, lr=0.002, norm_mask=8.02, norm_target=10.6]Steps:   2%|▏         | 61/3001 [01:32<1:01:02,  1.25s/it, loss=0.313, loss_mlm=1.14, lr=0.002, norm_mask=8.02, norm_target=10.6] Steps:   2%|▏         | 62/3001 [01:32<1:00:16,  1.23s/it, loss=0.313, loss_mlm=1.14, lr=0.002, norm_mask=8.02, norm_target=10.6]Steps:   2%|▏         | 62/3001 [01:33<1:00:16,  1.23s/it, loss=0.0671, loss_mlm=1.08, lr=0.002, norm_mask=8.02, norm_target=10.6]Steps:   2%|▏         | 63/3001 [01:33<59:41,  1.22s/it, loss=0.0671, loss_mlm=1.08, lr=0.002, norm_mask=8.02, norm_target=10.6]  Steps:   2%|▏         | 63/3001 [01:34<59:41,  1.22s/it, loss=0.0876, loss_mlm=0.809, lr=0.002, norm_mask=8.02, norm_target=10.7]Steps:   2%|▏         | 64/3001 [01:34<59:13,  1.21s/it, loss=0.0876, loss_mlm=0.809, lr=0.002, norm_mask=8.02, norm_target=10.7]Steps:   2%|▏         | 64/3001 [01:36<59:13,  1.21s/it, loss=0.0496, loss_mlm=1.32, lr=0.002, norm_mask=8.02, norm_target=10.7] Steps:   2%|▏         | 65/3001 [01:36<58:58,  1.21s/it, loss=0.0496, loss_mlm=1.32, lr=0.002, norm_mask=8.02, norm_target=10.7]Steps:   2%|▏         | 65/3001 [01:37<58:58,  1.21s/it, loss=0.00819, loss_mlm=1.31, lr=0.002, norm_mask=8.02, norm_target=10.7]Steps:   2%|▏         | 66/3001 [01:37<58:43,  1.20s/it, loss=0.00819, loss_mlm=1.31, lr=0.002, norm_mask=8.02, norm_target=10.7]Steps:   2%|▏         | 66/3001 [01:38<58:43,  1.20s/it, loss=0.136, loss_mlm=1.35, lr=0.002, norm_mask=8.02, norm_target=10.7]  Steps:   2%|▏         | 67/3001 [01:38<58:40,  1.20s/it, loss=0.136, loss_mlm=1.35, lr=0.002, norm_mask=8.02, norm_target=10.7]Steps:   2%|▏         | 67/3001 [01:39<58:40,  1.20s/it, loss=0.0118, loss_mlm=1.4, lr=0.002, norm_mask=8.02, norm_target=10.8]Steps:   2%|▏         | 68/3001 [01:39<58:30,  1.20s/it, loss=0.0118, loss_mlm=1.4, lr=0.002, norm_mask=8.02, norm_target=10.8]Steps:   2%|▏         | 68/3001 [01:40<58:30,  1.20s/it, loss=0.0286, loss_mlm=0.916, lr=0.002, norm_mask=8.02, norm_target=10.8]Steps:   2%|▏         | 69/3001 [01:40<58:20,  1.19s/it, loss=0.0286, loss_mlm=0.916, lr=0.002, norm_mask=8.02, norm_target=10.8]Steps:   2%|▏         | 69/3001 [01:42<58:20,  1.19s/it, loss=0.14, loss_mlm=0.965, lr=0.002, norm_mask=8.02, norm_target=10.8]  Steps:   2%|▏         | 70/3001 [01:42<58:23,  1.20s/it, loss=0.14, loss_mlm=0.965, lr=0.002, norm_mask=8.02, norm_target=10.8]Steps:   2%|▏         | 70/3001 [01:43<58:23,  1.20s/it, loss=0.0802, loss_mlm=0.868, lr=0.002, norm_mask=8.02, norm_target=10.8]Steps:   2%|▏         | 71/3001 [01:43<58:32,  1.20s/it, loss=0.0802, loss_mlm=0.868, lr=0.002, norm_mask=8.02, norm_target=10.8]Steps:   2%|▏         | 71/3001 [01:44<58:32,  1.20s/it, loss=0.113, loss_mlm=0.67, lr=0.002, norm_mask=8.02, norm_target=10.9]  Steps:   2%|▏         | 72/3001 [01:44<58:22,  1.20s/it, loss=0.113, loss_mlm=0.67, lr=0.002, norm_mask=8.02, norm_target=10.9]Steps:   2%|▏         | 72/3001 [01:45<58:22,  1.20s/it, loss=0.773, loss_mlm=0.941, lr=0.002, norm_mask=8.02, norm_target=10.9]Steps:   2%|▏         | 73/3001 [01:45<58:23,  1.20s/it, loss=0.773, loss_mlm=0.941, lr=0.002, norm_mask=8.02, norm_target=10.9]Steps:   2%|▏         | 73/3001 [01:46<58:23,  1.20s/it, loss=0.19, loss_mlm=1.34, lr=0.002, norm_mask=8.02, norm_target=10.9]  Steps:   2%|▏         | 74/3001 [01:46<58:27,  1.20s/it, loss=0.19, loss_mlm=1.34, lr=0.002, norm_mask=8.02, norm_target=10.9]Steps:   2%|▏         | 74/3001 [01:48<58:27,  1.20s/it, loss=0.176, loss_mlm=0.915, lr=0.002, norm_mask=8.02, norm_target=10.9]Steps:   2%|▏         | 75/3001 [01:48<58:28,  1.20s/it, loss=0.176, loss_mlm=0.915, lr=0.002, norm_mask=8.02, norm_target=10.9]Steps:   2%|▏         | 75/3001 [01:49<58:28,  1.20s/it, loss=0.00554, loss_mlm=0.942, lr=0.002, norm_mask=8.02, norm_target=11]Steps:   3%|▎         | 76/3001 [01:49<58:15,  1.20s/it, loss=0.00554, loss_mlm=0.942, lr=0.002, norm_mask=8.02, norm_target=11]Steps:   3%|▎         | 76/3001 [01:50<58:15,  1.20s/it, loss=0.0358, loss_mlm=1.44, lr=0.002, norm_mask=8.02, norm_target=11]  Steps:   3%|▎         | 77/3001 [01:50<58:03,  1.19s/it, loss=0.0358, loss_mlm=1.44, lr=0.002, norm_mask=8.02, norm_target=11]Steps:   3%|▎         | 77/3001 [01:51<58:03,  1.19s/it, loss=0.00927, loss_mlm=1.01, lr=0.002, norm_mask=8.02, norm_target=11]Steps:   3%|▎         | 78/3001 [01:51<57:52,  1.19s/it, loss=0.00927, loss_mlm=1.01, lr=0.002, norm_mask=8.02, norm_target=11]Steps:   3%|▎         | 78/3001 [01:53<57:52,  1.19s/it, loss=0.0204, loss_mlm=1.18, lr=0.002, norm_mask=8.02, norm_target=11] Steps:   3%|▎         | 79/3001 [01:53<1:02:37,  1.29s/it, loss=0.0204, loss_mlm=1.18, lr=0.002, norm_mask=8.02, norm_target=11]Steps:   3%|▎         | 79/3001 [01:54<1:02:37,  1.29s/it, loss=0.14, loss_mlm=1.16, lr=0.002, norm_mask=8.02, norm_target=11.2]Steps:   3%|▎         | 80/3001 [01:54<1:01:13,  1.26s/it, loss=0.14, loss_mlm=1.16, lr=0.002, norm_mask=8.02, norm_target=11.2]Steps:   3%|▎         | 80/3001 [01:55<1:01:13,  1.26s/it, loss=0.103, loss_mlm=0.913, lr=0.002, norm_mask=8.02, norm_target=11.2]Steps:   3%|▎         | 81/3001 [01:55<1:00:12,  1.24s/it, loss=0.103, loss_mlm=0.913, lr=0.002, norm_mask=8.02, norm_target=11.2]Steps:   3%|▎         | 81/3001 [01:56<1:00:12,  1.24s/it, loss=0.00929, loss_mlm=1.38, lr=0.002, norm_mask=8.02, norm_target=11.2]Steps:   3%|▎         | 82/3001 [01:56<59:34,  1.22s/it, loss=0.00929, loss_mlm=1.38, lr=0.002, norm_mask=8.02, norm_target=11.2]  Steps:   3%|▎         | 82/3001 [01:57<59:34,  1.22s/it, loss=0.0587, loss_mlm=1.31, lr=0.002, norm_mask=8.02, norm_target=11.2] Steps:   3%|▎         | 83/3001 [01:57<59:00,  1.21s/it, loss=0.0587, loss_mlm=1.31, lr=0.002, norm_mask=8.02, norm_target=11.2]Steps:   3%|▎         | 83/3001 [01:59<59:00,  1.21s/it, loss=0.442, loss_mlm=1.16, lr=0.002, norm_mask=8.02, norm_target=11.3] Steps:   3%|▎         | 84/3001 [01:59<58:50,  1.21s/it, loss=0.442, loss_mlm=1.16, lr=0.002, norm_mask=8.02, norm_target=11.3]Steps:   3%|▎         | 84/3001 [02:00<58:50,  1.21s/it, loss=0.0704, loss_mlm=0.633, lr=0.002, norm_mask=8.02, norm_target=11.3]Steps:   3%|▎         | 85/3001 [02:00<58:37,  1.21s/it, loss=0.0704, loss_mlm=0.633, lr=0.002, norm_mask=8.02, norm_target=11.3]Steps:   3%|▎         | 85/3001 [02:01<58:37,  1.21s/it, loss=0.365, loss_mlm=1.19, lr=0.002, norm_mask=8.02, norm_target=11.3]  Steps:   3%|▎         | 86/3001 [02:01<58:23,  1.20s/it, loss=0.365, loss_mlm=1.19, lr=0.002, norm_mask=8.02, norm_target=11.3]Steps:   3%|▎         | 86/3001 [02:02<58:23,  1.20s/it, loss=0.0101, loss_mlm=0.969, lr=0.002, norm_mask=8.02, norm_target=11.3]Steps:   3%|▎         | 87/3001 [02:02<58:11,  1.20s/it, loss=0.0101, loss_mlm=0.969, lr=0.002, norm_mask=8.02, norm_target=11.3]Steps:   3%|▎         | 87/3001 [02:03<58:11,  1.20s/it, loss=0.0217, loss_mlm=1.44, lr=0.002, norm_mask=8.02, norm_target=11.4] Steps:   3%|▎         | 88/3001 [02:03<58:05,  1.20s/it, loss=0.0217, loss_mlm=1.44, lr=0.002, norm_mask=8.02, norm_target=11.4]Steps:   3%|▎         | 88/3001 [02:05<58:05,  1.20s/it, loss=0.011, loss_mlm=1.2, lr=0.002, norm_mask=8.02, norm_target=11.4]  Steps:   3%|▎         | 89/3001 [02:05<58:06,  1.20s/it, loss=0.011, loss_mlm=1.2, lr=0.002, norm_mask=8.02, norm_target=11.4]Steps:   3%|▎         | 89/3001 [02:06<58:06,  1.20s/it, loss=0.0233, loss_mlm=1.31, lr=0.002, norm_mask=8.02, norm_target=11.4]Steps:   3%|▎         | 90/3001 [02:06<57:58,  1.20s/it, loss=0.0233, loss_mlm=1.31, lr=0.002, norm_mask=8.02, norm_target=11.4]439510307 worker_seed
+439510306 worker_seed
+439510309 worker_seed
+439510308 worker_seed
+Generated
+Traceback (most recent call last):
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 975, in <module>
+    main()
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 809, in main
+    caption_log_file=open(caption_log_path,'a')
+FileNotFoundError: [Errno 2] No such file or directory: 'saved_models/ti_models/single_capv7_prior_seed2940_rep1/duck_toy/ti_cnetv4_prior_mlm00001_duck_toy_mprob015_mbatch25/src/log_captions.txt'
+Steps:   3%|▎         | 90/3001 [02:08<1:09:11,  1.43s/it, loss=0.0233, loss_mlm=1.31, lr=0.002, norm_mask=8.02, norm_target=11.4]
+Traceback (most recent call last):
+  File "/home/twkim/anaconda3/envs/context/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/accelerate_cli.py", line 47, in main
+    args.func(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 1023, in launch_command
+    simple_launcher(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 643, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/twkim/anaconda3/envs/context/bin/python', 'ti_train.py', '--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5', '--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/duck_toy', '--learnable_property=object', '--placeholder_token1=<duck_toy>', '--train_prior_concept1=duck', '--eval_prior_concept1=duck toy', '--resolution=512', '--train_batch_size=1', '--gradient_accumulation_steps=4', '--max_train_steps=3001', '--learning_rate=5e-4', '--lr_scheduler=constant', '--normalize_mask_embeds=0', '--lr_warmup_steps=0', '--output_dir=saved_models/ti_models/single_capv7_prior_seed2940_rep1/duck_toy', '--seed=2940', '--mask_tokens=[MASK]', '--lambda_mlm=0.0001', '--freeze_mask_embedding=1', '--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt', '--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt', '--mask_prob=0.15', '--mlm_target=masked', '--mlm_batch_size=25', '--scale_lr', '--eval_prompt_type=nonliving', '--train_prompt_type=nonliving', '--silent=0', '--rev=0', '--normalize_target1=0', '--caption_root=../datasets_pkgs/captions/v7', '--run_name=ti_cnetv4_prior_mlm00001_duck_toy_mprob015_mbatch25', '--include_prior_concept=1']' returned non-zero exit status 1.

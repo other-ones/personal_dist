@@ -1,0 +1,239 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 1.4.14 (you have 1.4.11). Upgrade using: pip install --upgrade albumentations
+WARNING:xformers:WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.1+cu121 with CUDA 1201 (you have 2.1.1+cu118)
+    Python  3.9.18 (you have 3.9.19)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+wandb: Currently logged in as: tuk101234 (qlab-taewook). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.9 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.21
+wandb: Run data is saved locally in /home/twkim/project/rich_context/textual_inversion/wandb/run-20240911_062026-0sbnh8wm
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run lunar-pond-595
+wandb: ⭐️ View project at https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE
+wandb: 🚀 View run at https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE/runs/0sbnh8wm
+[34m[1mwandb[0m: [33mWARNING[0m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+INFO:__main__:Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+
+/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+{'sample_max_value', 'timestep_spacing', 'dynamic_thresholding_ratio', 'thresholding', 'prediction_type', 'variance_type', 'clip_sample_range'} was not found in config. Values will be initialized to default values.
+{'scaling_factor'} was not found in config. Values will be initialized to default values.
+{'encoder_hid_dim', 'upcast_attention', 'conv_in_kernel', 'time_cond_proj_dim', 'mid_block_type', 'time_embedding_act_fn', 'addition_embed_type', 'transformer_layers_per_block', 'resnet_skip_time_act', 'cross_attention_norm', 'only_cross_attention', 'class_embed_type', 'num_class_embeds', 'class_embeddings_concat', 'addition_embed_type_num_heads', 'use_linear_projection', 'projection_class_embeddings_input_dim', 'resnet_time_scale_shift', 'conv_out_kernel', 'dual_cross_attention', 'num_attention_heads', 'resnet_out_scale_factor', 'encoder_hid_dim_type', 'timestep_post_act', 'time_embedding_type', 'time_embedding_dim', 'mid_block_only_cross_attention', 'addition_time_embed_dim'} was not found in config. Values will be initialized to default values.
+INFO:__main__:***** Running training *****
+INFO:__main__:  Num examples = 10000000
+INFO:__main__:  Num Epochs = 1
+INFO:__main__:  Instantaneous batch size per device = 1
+INFO:__main__:  Total train batch size (w. parallel, distributed & accumulation) = 4
+INFO:__main__:  Gradient Accumulation steps = 4
+INFO:__main__:  Total optimization steps = 3001
+set seed 2940
+saved_models/ti_models/single_mtarget_capv7_prior_seed2940_rep1/duck_toy/ti_cnetv4_prior_mlm00005_duck_toy_mprob02_mbatch25_mtarget_masked_tagged/src/command.txt command_path
+ti_train.py item
+--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5 item
+--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/duck_toy item
+--learnable_property=object item
+--placeholder_token1=<duck_toy> item
+--train_prior_concept1=duck item
+--eval_prior_concept1=duck toy item
+--resolution=512 item
+--train_batch_size=1 item
+--gradient_accumulation_steps=4 item
+--max_train_steps=3001 item
+--learning_rate=5e-4 item
+--lr_scheduler=constant item
+--initializer_token=duck item
+--normalize_mask_embeds=0 item
+--lr_warmup_steps=0 item
+--output_dir=saved_models/ti_models/single_mtarget_capv7_prior_seed2940_rep1/duck_toy item
+--seed=2940 item
+--mask_tokens=[MASK] item
+--lambda_mlm=0.0005 item
+--freeze_mask_embedding=1 item
+--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt item
+--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt item
+--mask_prob=0.2 item
+--mlm_batch_size=25 item
+--scale_lr item
+--eval_prompt_type=nonliving item
+--train_prompt_type=nonliving item
+--silent=0 item
+--rev=0 item
+--check_tag=VERB-ADJ-ADV-PROPN-ADP-NOUN item
+--mlm_target=masked item
+--normalize_target1=0 item
+--caption_root=../datasets_pkgs/captions/v7 item
+--run_name=ti_cnetv4_prior_mlm00005_duck_toy_mprob02_mbatch25_mtarget_masked_tagged item
+--report_to=wandb item
+--project_name=TI MLM SINGLE item
+--include_prior_concept=1 item
+32 norm_num_groups
+320 block_out_channels[0]
+32 norm_num_groups
+text_model.embeddings.token_embedding.weight text_encoder requires
+[49409] mask_token_ids
+seeded
+captions_nonliving_backgrounds	552
+captions_nonliving_creatives	117
+captions_nonliving_human_interactions	4176
+captions_nonliving_relations	29376
+captions_nonliving_styles	378
+seeded
+captions_nonliving_backgrounds	552
+captions_nonliving_creatives	117
+captions_nonliving_human_interactions	4176
+captions_nonliving_relations	29376
+captions_nonliving_styles	378
+position_ids defined_key-clsnet
+final.weight defined_key-clsnet
+final.bias defined_key-clsnet
+position_embedding.weight defined_key-clsnet
+multi_head_attention1.in_proj_weight defined_key-clsnet
+multi_head_attention1.in_proj_bias defined_key-clsnet
+multi_head_attention1.out_proj.weight defined_key-clsnet
+multi_head_attention1.out_proj.bias defined_key-clsnet
+feed_forward1.W_ff1.weight defined_key-clsnet
+feed_forward1.W_ff1.bias defined_key-clsnet
+feed_forward1.W_ff2.weight defined_key-clsnet
+feed_forward1.W_ff2.bias defined_key-clsnet
+layer_norm1.weight defined_key-clsnet
+layer_norm1.bias defined_key-clsnet
+multi_head_attention2.in_proj_weight defined_key-clsnet
+multi_head_attention2.in_proj_bias defined_key-clsnet
+multi_head_attention2.out_proj.weight defined_key-clsnet
+multi_head_attention2.out_proj.bias defined_key-clsnet
+layer_norm2.weight defined_key-clsnet
+layer_norm2.bias defined_key-clsnet
+
+module.position_ids saved_key-clsnet
+module.final.weight saved_key-clsnet
+module.final.bias saved_key-clsnet
+module.position_embedding.weight saved_key-clsnet
+module.multi_head_attention1.in_proj_weight saved_key-clsnet
+module.multi_head_attention1.in_proj_bias saved_key-clsnet
+module.multi_head_attention1.out_proj.weight saved_key-clsnet
+module.multi_head_attention1.out_proj.bias saved_key-clsnet
+module.feed_forward1.W_ff1.weight saved_key-clsnet
+module.feed_forward1.W_ff1.bias saved_key-clsnet
+module.feed_forward1.W_ff2.weight saved_key-clsnet
+module.feed_forward1.W_ff2.bias saved_key-clsnet
+module.layer_norm1.weight saved_key-clsnet
+module.layer_norm1.bias saved_key-clsnet
+module.multi_head_attention2.in_proj_weight saved_key-clsnet
+module.multi_head_attention2.in_proj_bias saved_key-clsnet
+module.multi_head_atteSteps:   0% 0/3001 [00:00<?, ?it/s]ntion2.out_proj.weight saved_key-clsnet
+module.multi_head_attention2.out_proj.bias saved_key-clsnet
+module.layer_norm2.weight saved_key-clsnet
+module.layer_norm2.bias saved_key-clsnet
+True accepts_keep_fp32_wrapper
+{'keep_fp32_wrapper': True} extra_args
+INFO:__main__:STEP 0 Running validation... 
+ Generating 8 images with prompt: ['a <duck_toy> duck in the jungle', 'a <duck_toy> duck with a city in the background', 'a <duck_toy> duck with a mountain in the background', 'a <duck_toy> duck with the Eiffel Tower in the background', 'a <duck_toy> duck floating on top of water', 'a <duck_toy> duck floating in an ocean of milk', 'a <duck_toy> duck on top of the sidewalk in a crowded street', 'a cube shaped <duck_toy> duck'].
+
+
+
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+Step		|0
+Raw		|vincent    van        gogh       is         M[auc]     M[tioning] <duck_toy> duck      
+Masked		|vincent    van        gogh       is         [MASK]     [MASK]     <duck_toy> duck      
+Preds		|an         hand       gogh       is         M[watching] M[a]       duck       duck      
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+  0% 0/25 [00:00<?, ?it/s][A
+  4% 1/25 [00:00<00:09,  2.53it/s][A
+  8% 2/25 [00:00<00:08,  2.76it/s][A
+ 12% 3/25 [00:01<00:07,  2.84it/s][A
+ 16% 4/25 [00:01<00:07,  2.87it/s][A
+ 20% 5/25 [00:01<00:06,  2.90it/s][A
+ 24% 6/25 [00:02<00:06,  2.92it/s][A
+ 28% 7/25 [00:02<00:06,  2.92it/s][A
+ 32% 8/25 [00:02<00:05,  2.93it/s][A
+ 36% 9/25 [00:03<00:05,  2.93it/s][A
+ 40% 10/25 [00:03<00:05,  2.93it/s][A
+ 44% 11/25 [00:03<00:04,  2.94it/s][A
+ 48% 12/25 [00:04<00:04,  2.94it/s][A
+ 52% 13/25 [00:04<00:04,  2.94it/s][A
+ 56% 14/25 [00:04<00:03,  2.94it/s][A
+ 60% 15/25 [00:05<00:03,  2.94it/s][A
+ 64% 16/25 [00:05<00:03,  2.94it/s][A
+ 68% 17/25 [00:05<00:02,  2.94it/s][A
+ 72% 18/25 [00:06<00:02,  2.94it/s][A
+ 76% 19/25 [00:06<00:02,  2.94it/s][A
+ 80% 20/25 [00:06<00:01,  2.94it/s][A
+ 84% 21/25 [00:07<00:01,  2.94it/s][A
+ 88% 22/25 [00:07<00:01,  2.94it/s][A
+ 92% 23/25 [00:07<00:00,  2.93it/s][A
+ 96% 24/25 [00:08<00:00,  2.93it/s][A
+100% 25/25 [00:08<00:00,  2.93it/s][A439510307 worker_seed
+439510306 worker_seed
+439510308 worker_seed
+439510309 worker_seed
+Traceback (most recent call last):
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 1000, in <module>
+    main()
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 909, in main
+    images,validation_prompts = log_validation(
+  File "/home/twkim/project/rich_context/textual_inversion/ti_train.py", line 154, in log_validation
+    images = pipeline(validation_prompts,
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/twkim/project/rich_context/textual_inversion/./packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion.py", line 786, in __call__
+    image = self.vae.decode(latents / self.vae.config.scaling_factor, return_dict=False)[0]
+  File "/home/twkim/project/rich_context/textual_inversion/./packages/diffusers/utils/accelerate_utils.py", line 46, in wrapper
+    return method(self, *args, **kwargs)
+  File "/home/twkim/project/rich_context/textual_inversion/./packages/diffusers/models/autoencoder_kl.py", line 264, in decode
+    decoded = self._decode(z).sample
+  File "/home/twkim/project/rich_context/textual_inversion/./packages/diffusers/models/autoencoder_kl.py", line 251, in _decode
+    dec = self.decoder(z)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/twkim/project/rich_context/textual_inversion/./packages/diffusers/models/vae.py", line 270, in forward
+    sample = up_block(sample, latent_embeds)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/twkim/project/rich_context/textual_inversion/./packages/diffusers/models/unet_2d_blocks.py", line 2274, in forward
+    hidden_states = resnet(hidden_states, temb=temb)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/twkim/project/rich_context/textual_inversion/./packages/diffusers/models/resnet.py", line 596, in forward
+    hidden_states = self.norm1(hidden_states)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/nn/modules/normalization.py", line 279, in forward
+    return F.group_norm(
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/torch/nn/functional.py", line 2558, in group_norm
+    return torch.group_norm(input, num_groups, weight, bias, eps, torch.backends.cudnn.enabled)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacty of 23.69 GiB of which 1.51 GiB is free. Process 3393237 has 11.08 GiB memory in use. Including non-PyTorch memory, this process has 11.09 GiB memory in use. Of the allocated memory 9.72 GiB is allocated by PyTorch, and 639.52 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: | 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: / 0.002 MB of 0.020 MB uploaded (0.000 MB deduped)wandb: - 0.002 MB of 0.031 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.031 MB uploaded (0.000 MB deduped)wandb: | 0.008 MB of 0.031 MB uploaded (0.000 MB deduped)wandb: / 0.031 MB of 0.031 MB uploaded (0.000 MB deduped)wandb: - 0.031 MB of 0.031 MB uploaded (0.000 MB deduped)wandb: \ 0.031 MB of 0.031 MB uploaded (0.000 MB deduped)wandb: | 0.031 MB of 0.031 MB uploaded (0.000 MB deduped)wandb: / 0.031 MB of 0.031 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: Synced lunar-pond-595: https://wandb.ai/qlab-taewook/TI%20MLM%20SINGLE/runs/0sbnh8wm
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240911_062026-0sbnh8wm/logs
+Traceback (most recent call last):
+  File "/home/twkim/anaconda3/envs/context/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/accelerate_cli.py", line 47, in main
+    args.func(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 1023, in launch_command
+    simple_launcher(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 643, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/twkim/anaconda3/envs/context/bin/python', 'ti_train.py', '--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5', '--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/duck_toy', '--learnable_property=object', '--placeholder_token1=<duck_toy>', '--train_prior_concept1=duck', '--eval_prior_concept1=duck toy', '--resolution=512', '--train_batch_size=1', '--gradient_accumulation_steps=4', '--max_train_steps=3001', '--learning_rate=5e-4', '--lr_scheduler=constant', '--initializer_token=duck', '--normalize_mask_embeds=0', '--lr_warmup_steps=0', '--output_dir=saved_models/ti_models/single_mtarget_capv7_prior_seed2940_rep1/duck_toy', '--seed=2940', '--mask_tokens=[MASK]', '--lambda_mlm=0.0005', '--freeze_mask_embedding=1', '--cls_net_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/cls_net_100000_ckpt.pt', '--mask_embed_path=saved_models/mlm_models/sd1_contextnetv4_nonpadding_1e4_unnorm_mprob015_batch150/checkpoints/checkpoint-100000/mask_embeds_100000_ckpt.pt', '--mask_prob=0.2', '--mlm_batch_size=25', '--scale_lr', '--eval_prompt_type=nonliving', '--train_prompt_type=nonliving', '--silent=0', '--rev=0', '--check_tag=VERB-ADJ-ADV-PROPN-ADP-NOUN', '--mlm_target=masked', '--normalize_target1=0', '--caption_root=../datasets_pkgs/captions/v7', '--run_name=ti_cnetv4_prior_mlm00005_duck_toy_mprob02_mbatch25_mtarget_masked_tagged', '--report_to=wandb', '--project_name=TI MLM SINGLE', '--include_prior_concept=1']' returned non-zero exit status 1.

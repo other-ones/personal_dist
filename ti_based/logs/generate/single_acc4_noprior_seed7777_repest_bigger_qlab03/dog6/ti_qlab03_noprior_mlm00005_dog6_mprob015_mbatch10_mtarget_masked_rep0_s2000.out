@@ -1,0 +1,51 @@
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.1+cu121 with CUDA 1201 (you have 2.1.1+cu118)
+    Python  3.9.18 (you have 3.9.19)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+cp: cannot stat 'datasets_pkgs': No such file or directory
+/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+results/ti_results/single_acc4_noprior_seed7777_repest_bigger_qlab03/dog6/ti_qlab03_noprior_mlm00005_dog6_mprob015_mbatch10_mtarget_masked_rep0_s2000 exp_dir
+results/ti_results/single_acc4_noprior_seed7777_repest_bigger_qlab03/dog6/ti_qlab03_noprior_mlm00005_dog6_mprob015_mbatch10_mtarget_masked_rep0_s2000/src/command.txt command_path
+ti_generate.py item
+--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5 item
+--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/dog6 item
+--placeholder_token1=<dog6> item
+--train_prior_concept1=dog item
+--eval_prior_concept1=dog item
+--resolution=512 item
+--dst_exp_path=results/ti_results/single_acc4_noprior_seed7777_repest_bigger_qlab03/dog6/ti_qlab03_noprior_mlm00005_dog6_mprob015_mbatch10_mtarget_masked_rep0_s2000 item
+--benchmark_path=../datasets_pkgs/eval_prompts/dreambooth.json item
+--eval_batch_size=15 item
+--num_images_per_prompt=8 item
+--output_dir=results/ti_results/single_acc4_noprior_seed7777_repest_bigger_qlab03/dog6 item
+--seed=7777 item
+--mask_tokens=[MASK] item
+--learned_embed_path1=saved_models/ti_models/single_acc4_noprior_seed7777_repest_bigger_qlab03/dog6/ti_qlab03_noprior_mlm00005_dog6_mprob015_mbatch10_mtarget_masked_rep0/checkpoints/learned_embeds_s2000.pt item
+--calibrate_ppos1=0 item
+--rev=0 item
+--train_prompt_type=pet item
+--eval_prompt_type=living item
+--include_prior_concept=0 item
+torch.Size([49409, 768]) token_embeds.shape
+32 norm_num_groups
+320 block_out_channels[0]
+32 norm_num_groups
+/home/twkim/project/rich_context/textual_inversion/./packages/diffusers/models/modeling_utils.py inspect
+unet param loaded
+../datasets_pkgs/eval_prompts/dreambooth.json args.benchmark_path
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:01<01:26,  1.76s/it]  4%|▍         | 2/50 [00:03<01:20,  1.68s/it]  6%|▌         | 3/50 [00:04<01:17,  1.65s/it]  8%|▊         | 4/50 [00:06<01:15,  1.64s/it] 10%|█         | 5/50 [00:08<01:13,  1.63s/it] 12%|█▏        | 6/50 [00:09<01:11,  1.63s/it] 14%|█▍        | 7/50 [00:11<01:10,  1.63s/it] 16%|█▌        | 8/50 [00:13<01:08,  1.63s/it] 18%|█▊        | 9/50 [00:14<01:06,  1.63s/it] 20%|██        | 10/50 [00:16<01:05,  1.63s/it] 22%|██▏       | 11/50 [00:18<01:03,  1.63s/it] 24%|██▍       | 12/50 [00:19<01:02,  1.64s/it] 26%|██▌       | 13/50 [00:21<01:00,  1.64s/it] 28%|██▊       | 14/50 [00:22<00:58,  1.64s/it] 30%|███       | 15/50 [00:24<00:57,  1.64s/it] 32%|███▏      | 16/50 [00:26<00:55,  1.64s/it] 34%|███▍      | 17/50 [00:27<00:54,  1.64s/it] 36%|███▌      | 18/50 [00:29<00:52,  1.64s/it] 38%|███▊      | 19/50 [00:31<00:50,  1.64s/it] 40%|████      | 20/50 [00:32<00:49,  1.64s/it] 42%|████▏     | 21/50 [00:34<00:47,  1.64s/it] 44%|████▍     | 22/50 [00:36<00:45,  1.64s/it] 46%|████▌     | 23/50 [00:37<00:44,  1.64s/it] 48%|████▊     | 24/50 [00:39<00:42,  1.64s/it] 50%|█████     | 25/50 [00:41<00:41,  1.65s/it] 52%|█████▏    | 26/50 [00:42<00:39,  1.65s/it] 54%|█████▍    | 27/50 [00:44<00:37,  1.65s/it] 56%|█████▌    | 28/50 [00:45<00:36,  1.65s/it] 58%|█████▊    | 29/50 [00:47<00:34,  1.65s/it] 60%|██████    | 30/50 [00:49<00:33,  1.65s/it] 62%|██████▏   | 31/50 [00:50<00:31,  1.65s/it] 64%|██████▍   | 32/50 [00:52<00:29,  1.65s/it] 66%|██████▌   | 33/50 [00:54<00:28,  1.65s/it] 68%|██████▊   | 34/50 [00:55<00:26,  1.65s/it] 70%|███████   | 35/50 [00:57<00:24,  1.65s/it] 72%|███████▏  | 36/50 [00:59<00:23,  1.65s/it] 74%|███████▍  | 37/50 [01:00<00:21,  1.64s/it] 76%|███████▌  | 38/50 [01:02<00:19,  1.64s/it] 78%|███████▊  | 39/50 [01:04<00:18,  1.64s/it] 80%|████████  | 40/50 [01:05<00:16,  1.64s/it] 82%|████████▏ | 41/50 [01:07<00:14,  1.64s/it] 84%|████████▍ | 42/50 [01:09<00:13,  1.64s/it] 86%|████████▌ | 43/50 [01:10<00:11,  1.64s/it] 88%|████████▊ | 44/50 [01:12<00:09,  1.64s/it] 90%|█████████ | 45/50 [01:13<00:08,  1.64s/it] 92%|█████████▏| 46/50 [01:15<00:06,  1.65s/it] 94%|█████████▍| 47/50 [01:17<00:04,  1.65s/it] 96%|█████████▌| 48/50 [01:18<00:03,  1.65s/it] 98%|█████████▊| 49/50 [01:20<00:01,  1.65s/it]100%|██████████| 50/50 [01:22<00:00,  1.65s/it]100%|██████████| 50/50 [01:24<00:00,  1.69s/it]
+1 14 1.7431433200836182
+(3132, 662) merged_viz.size 15 len(images)
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:01<01:21,  1.66s/it]  4%|▍         | 2/50 [00:03<01:19,  1.65s/it]  6%|▌         | 3/50 [00:04<01:17,  1.65s/it]  8%|▊         | 4/50 [00:06<01:15,  1.65s/it] 10%|█         | 5/50 [00:08<01:14,  1.65s/it] 12%|█▏        | 6/50 [00:09<01:12,  1.65s/it] 14%|█▍        | 7/50 [00:11<01:10,  1.65s/it] 16%|█▌        | 8/50 [00:13<01:09,  1.65s/it] 18%|█▊        | 9/50 [00:14<01:07,  1.65s/it] 20%|██        | 10/50 [00:16<01:05,  1.65s/it] 22%|██▏       | 11/50 [00:18<01:04,  1.65s/it] 24%|██▍       | 12/50 [00:19<01:02,  1.65s/it] 26%|██▌       | 13/50 [00:21<01:01,  1.65s/it] 28%|██▊       | 14/50 [00:23<00:59,  1.65s/it] 30%|███       | 15/50 [00:24<00:57,  1.65s/it] 32%|███▏      | 16/50 [00:26<00:56,  1.65s/it] 34%|███▍      | 17/50 [00:28<00:54,  1.65s/it] 36%|███▌      | 18/50 [00:29<00:52,  1.65s/it] 38%|███▊      | 19/50 [00:31<00:51,  1.65s/it] 40%|████      | 20/50 [00:32<00:49,  1.65s/it] 42%|████▏     | 21/50 [00:34<00:47,  1.65s/it] 44%|████▍     | 22/50 [00:36<00:46,  1.65s/it] 46%|████▌     | 23/50 [00:37<00:44,  1.65s/it] 48%|████▊     | 24/50 [00:39<00:42,  1.65s/it]Traceback (most recent call last):
+  File "/home/twkim/anaconda3/envs/context/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/accelerate_cli.py", line 47, in main
+    args.func(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 1023, in launch_command
+    simple_launcher(args)
+  File "/home/twkim/anaconda3/envs/context/lib/python3.9/site-packages/accelerate/commands/launch.py", line 643, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/home/twkim/anaconda3/envs/context/bin/python', 'ti_generate.py', '--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5', '--train_data_dir1=/data/twkim/diffusion/personalization/collected/images/dog6', '--placeholder_token1=<dog6>', '--train_prior_concept1=dog', '--eval_prior_concept1=dog', '--resolution=512', '--dst_exp_path=results/ti_results/single_acc4_noprior_seed7777_repest_bigger_qlab03/dog6/ti_qlab03_noprior_mlm00005_dog6_mprob015_mbatch10_mtarget_masked_rep0_s2000', '--benchmark_path=../datasets_pkgs/eval_prompts/dreambooth.json', '--eval_batch_size=15', '--num_images_per_prompt=8', '--output_dir=results/ti_results/single_acc4_noprior_seed7777_repest_bigger_qlab03/dog6', '--seed=7777', '--mask_tokens=[MASK]', '--learned_embed_path1=saved_models/ti_models/single_acc4_noprior_seed7777_repest_bigger_qlab03/dog6/ti_qlab03_noprior_mlm00005_dog6_mprob015_mbatch10_mtarget_masked_rep0/checkpoints/learned_embeds_s2000.pt', '--calibrate_ppos1=0', '--rev=0', '--train_prompt_type=pet', '--eval_prompt_type=living', '--include_prior_concept=0']' died with <Signals.SIGKILL: 9>.
