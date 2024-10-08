@@ -34,7 +34,7 @@ from diffusers import (
     AutoencoderKL,
     DDPMScheduler,
     UNet2DConditionModel,
-    StableDiffusionPipeline,
+    StableDiffusionPipelineDistill,
     UNet2DModel
 )
 from diffusers.models.attention_processor import (
@@ -318,7 +318,7 @@ def main(args):
             else:
                 new_state_dict[key]=defined_state_dict[key]
         unet.load_state_dict(new_state_dict,strict=True)
-        print('unet parameters loaded')
+        print('unet parameters loaded') 
         del new_state_dict
     
     accepts_keep_fp32_wrapper = "keep_fp32_wrapper" in set(
@@ -332,7 +332,7 @@ def main(args):
         else {}
     )
     unet=unet.to(accelerator.device)
-    pipeline = StableDiffusionPipeline(
+    pipeline = StableDiffusionPipelineDistill(
             vae=accelerator.unwrap_model(vae, **extra_args),
             unet=accelerator.unwrap_model(unet, **extra_args),
             text_encoder=accelerator.unwrap_model(text_encoder, **extra_args),
@@ -348,9 +348,14 @@ def main(args):
         placeholder='{} {}'.format(args.placeholder_token1,args.train_prior_concept1)
     else:
         placeholder='{}'.format(args.placeholder_token1)
-    eval_prompts=json.load(open(args.benchmark_path))[args.eval_prompt_type]
-    eval_prompts=[item.format(placeholder) for item in eval_prompts]
+    eval_prompts_raw=json.load(open(args.benchmark_path))[args.eval_prompt_type]
+
+    eval_prompts=[item.format(placeholder) for item in eval_prompts_raw]
+    eval_prompts_prior=[item.format(args.modifier + ' ' + args.train_prior_concept1) for item in eval_prompts_raw]
+
     eval_prompts=eval_prompts*args.num_images_per_prompt
+    eval_prompts_prior=eval_prompts_prior*args.num_images_per_prompt
+
     batch_size=args.eval_batch_size
     num_batches=(len(eval_prompts)//batch_size)+int((len(eval_prompts)/batch_size)>0)
     count=0
@@ -361,15 +366,18 @@ def main(args):
         target_emb1=accelerator.unwrap_model(text_encoder).get_input_embeddings().weight[min(placeholder_token_id1) : max(placeholder_token_id1) + 1]
         for batch_idx in range(num_batches):
             prompts=eval_prompts[batch_idx*batch_size:(batch_idx+1)*batch_size]
+            prompts_prior=eval_prompts_prior[batch_idx*batch_size:(batch_idx+1)*batch_size]
             if not len(prompts):
                 break
 
             
             print(sample_dir,'sample_dir')
             images = pipeline(prompt=prompts, 
+                            prompt_prior=prompts_prior,
                             num_inference_steps=50, 
                             guidance_scale=7.5, width=512, height=512,
                             num_images_per_prompt=1,
+                            distill=args.distill,
                             ).images
             
             # 

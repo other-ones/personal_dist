@@ -245,6 +245,7 @@ else:
             "StableDiffusionInstructPix2PixPipeline",
             "StableDiffusionLatentUpscalePipeline",
             "StableDiffusionPipeline",
+            "StableDiffusionPipelineDistill",
             "StableDiffusionUpscalePipeline",
             "StableUnCLIPImg2ImgPipeline",
             "StableUnCLIPPipeline",

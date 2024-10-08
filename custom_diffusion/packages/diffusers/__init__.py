@@ -321,6 +321,7 @@ else:
             "StableDiffusionPanoramaPipeline",
             "StableDiffusionParadigmsPipeline",
             "StableDiffusionPipeline",
+            "StableDiffusionPipelineDistill",
             "StableDiffusionPipelineSafe",
             "StableDiffusionPix2PixZeroPipeline",
             "StableDiffusionSAGPipeline",

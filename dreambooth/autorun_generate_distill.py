@@ -212,6 +212,7 @@ for gen_target_step in [1000]:
                 command+='--dst_exp_path="{}" \\\n'.format(dst_exp_path)
                 command+='--train_prior_concept1="{}" \\\n'.format(train_prior)
                 command+='--eval_prior_concept1="{}" \\\n'.format(eval_prior)
+                command+='--modifier=good \\\n'
                 command+='--train_prompt_type="{}" \\\n'.format(train_prompt_type)
                 command+='--eval_prompt_type="{}" \\\n'.format(eval_prompt_type)
                 command+='--distill={} \\\n'.format(distill)

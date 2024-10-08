@@ -306,7 +306,7 @@ def main(args):
     eval_prompts_raw=json.load(open(args.benchmark_path))[args.eval_prompt_type]
     eval_prompts=[item.format(placeholder) for item in eval_prompts_raw]
 
-    eval_prompts_prior=[item.format('cute' + args.train_prior_concept1) for item in eval_prompts_raw]
+    eval_prompts_prior=[item.format(args.modifier + args.train_prior_concept1) for item in eval_prompts_raw]
     eval_prompts=eval_prompts*args.num_images_per_prompt
     eval_prompts_prior=eval_prompts_prior*args.num_images_per_prompt
 
