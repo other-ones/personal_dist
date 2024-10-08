@@ -405,11 +405,6 @@ class StableDiffusionPipelineDistill(DiffusionPipeline, TextualInversionLoaderMi
                     output_attentions=True
                 )
                 prior_attn_prob_list=prompt_embeds_prior.attentions
-                # print(type(prior_attn_prob_list),'prior_attn_prob_list')
-                # print(len(prior_attn_prob_list),'prior_attn_prob_list len')
-                # for item in prior_attn_prob_list:
-                #     print(item.shape,'item.shape')
-                # exit(0)
                 print(len(prior_attn_prob_list),'prior_attn_prob_list pipeline')
                 
             else:
@@ -634,7 +629,7 @@ class StableDiffusionPipelineDistill(DiffusionPipeline, TextualInversionLoaderMi
         inj_embeddings2= None,
         is_keyword_tokens1= None,
         is_keyword_tokens2= None,
-        distill= 0,
+        distill = 0,
         # is_prior1= None,
         # is_prior2= None,
         # attn_mod_params= None,

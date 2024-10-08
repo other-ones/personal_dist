@@ -1,5 +1,12 @@
 textual_inversion/saved_models
 textual_inversion/results
 textual_inversion/tmp*
-ti_based/tmp*
-ti_based/results*
+textual_inversion/tmp*
+textual_inversion/results*
+textual_inversion/results*
+
+dreambooth/saved_models*
+dreambooth/results*
+
+custom_diffusion/results*
+custom_diffusion/saved_models*
