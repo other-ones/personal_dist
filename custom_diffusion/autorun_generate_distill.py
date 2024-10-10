@@ -9,28 +9,26 @@ concepts=os.listdir('/data/twkim/diffusion/personalization/collected/images')
 
 info_map={
     # train_prior/eval_prior/train_prompt_type/eval_prompt_type
-    'pet_cat1':('cat','cat','pet','living'),
-    'cat_statue': ('toy','toy','nonliving','nonliving'),
-    'backpack_dog':('backpack','backpack','nonliving','nonliving'),
-    'rc_car':('toy','toy','nonliving','nonliving'),
-    'cat1': ('cat','cat','pet','living'),
-    'backpack':('backpack','backpack','nonliving','nonliving'),
-    
-    'teapot':('teapot','teapot','nonliving','nonliving'),
-    'chair1': ('chair','chair','nonliving','nonliving'),
-    'dog6': ('dog','dog','pet','living'),
     'duck_toy':('duck','duck toy','nonliving','nonliving'),
+    'dog6': ('dog','dog','pet','living'),
+    'teapot':('teapot','teapot','nonliving','nonliving'),
+    'pet_cat1':('cat','cat','pet','living'),
 
-    'dog3':  ('dog','dog','pet','living'),
-    'cat2':('cat','cat','pet','living'),
+    # 'cat1': ('cat','cat','pet','living'),
+    # 'wooden_pot':('pot','wooden pot','nonliving','nonliving'),
+    # 'backpack_dog':('backpack','backpack','nonliving','nonliving'),
+    # 'poop_emoji':('toy','toy','nonliving','nonliving'),
+    # 'cat2':('cat','cat','pet','living'),
+    # 'dog3':  ('dog','dog','pet','living'),
+    # 'pet_dog1':('dog','dog','pet','living'),
 
-    'wooden_pot':('pot','wooden pot','nonliving','nonliving'),
-    'poop_emoji':('toy','toy','nonliving','nonliving'),
-    'pet_dog1':('dog','dog','pet','living'),
-    'teddybear':('teddy','teddy bear','nonliving','nonliving'),
+    # 'backpack':('backpack','backpack','nonliving','nonliving'),
+    # 'cat_statue': ('toy','toy','nonliving','nonliving'),
+    # 'rc_car':('toy','toy','nonliving','nonliving'),
+    # 'chair1': ('chair','chair','nonliving','nonliving'),
+    # 'teddybear':('teddy','teddy bear','nonliving','nonliving'),
+    # 'vase':('vase','vase','nonliving','nonliving'),
 
-    
-    
     # 'red_cartoon':('character','cartoon character','pet','living'),
     # 'candle':('candle','candle','nonliving','nonliving'),
     # 'can':('can','can','nonliving','nonliving'),
@@ -38,6 +36,7 @@ info_map={
     # 'barn': ('barn','barn'),
     # 'flower1':('flower','flower'),
 }
+
 
 info_map_04={
     # train_prior/eval_prior/train_prompt_type/eval_prompt_type
@@ -107,9 +106,11 @@ for stat_idx,stat in enumerate(stats):
 ports=np.arange(1111,2222)
 mask_prob_list=[0.15]
 seed=2940
-rep_id=1
-dir_name='sgpu_seed{}_qlab{}_rep{}'.format(seed,host_suffix,rep_id)
-
+# rep_id=1
+# dir_name='sgpu_seed{}_qlab{}_rep{}'.format(seed,host_suffix,rep_id)
+seed=2940
+rep_id=2
+dir_name='init_seed{}_qlab{}_rep{}'.format(seed,host_suffix,rep_id)
 lr_list=[1e-5]
 mlm_batch_size=25
 # ['VERB', 'ADJ','ADV','PROPN','ADP','NOUN']
@@ -136,7 +137,7 @@ for gen_target_step in [500]:
         concept_path=os.path.join(dir_path,concept)
         if not os.path.exists(concept_path):
             continue
-        for distill in [0.2,0,0.5]:
+        for distill in [0.2,0,0.5,0.7,0.9]:
             distill_str=str(distill*10)
             distill_str=distill_str.replace('.','')
             exps=os.listdir(concept_path)
@@ -144,11 +145,14 @@ for gen_target_step in [500]:
                 if not 'nomlm' in exp:
                     continue
                 train_prior,eval_prior,train_prompt_type,eval_prompt_type=info_map[concept]
+                # resume_cd_path=os.path.join(concept_path,exp,'checkpoints/checkpoint-{}/custom_diffusion.pt'.format(gen_target_step))
+                # learned_embed_path1=os.path.join(concept_path,exp,'checkpoints/checkpoint-{}/learned_embeds.pt'.format(gen_target_step))
                 resume_cd_path=os.path.join(concept_path,exp,'checkpoints/checkpoint-{}/custom_diffusion.pt'.format(gen_target_step))
                 learned_embed_path1=os.path.join(concept_path,exp,'checkpoints/checkpoint-{}/learned_embeds.pt'.format(gen_target_step))
                 if not os.path.exists(resume_cd_path):
                     print(resume_cd_path,'does not exist')
                     continue
+                
                 exp_name=resume_cd_path.split('/')[-4]
                 exp_name+='_s{}'.format(gen_target_step)
                 exp_name+='_dist{}'.format(distill_str)

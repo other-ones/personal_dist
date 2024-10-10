@@ -1,3 +1,4 @@
+import pdb
 import shutil
 from utils import render_caption
 import time
@@ -278,9 +279,10 @@ def main(args):
         placeholder=f'{args.train_prior_concept1}'
     print(args.benchmark_path,'args.benchmark_path')
     eval_prompts_raw=json.load(open(args.benchmark_path))[args.eval_prompt_type]
+    # eval_prompts_raw=["a picture of {} in the snow"]
     eval_prompts=[item.format(placeholder) for item in eval_prompts_raw]
     # prior
-    eval_prompts_prior=[item.format('cute' + args.train_prior_concept1) for item in eval_prompts_raw]
+    eval_prompts_prior=[item.format(args.modifier+ ' ' + args.train_prior_concept1) for item in eval_prompts_raw]
     eval_prompts=eval_prompts*args.num_images_per_prompt
     eval_prompts_prior=eval_prompts_prior*args.num_images_per_prompt
     batch_size=args.eval_batch_size
@@ -318,8 +320,63 @@ def main(args):
             prompts_prior=eval_prompts_prior[batch_idx*batch_size:(batch_idx+1)*batch_size]
             if not len(prompts):
                 break
-            if args.distill ==0:
+            if args.distill==0:
                 prompts_prior=None
+            is_keyword_tokens_list=[]
+            is_eot_list=[]
+            input_ids=tokenizer(
+                    prompts,
+                    padding="max_length",
+                    truncation=True,
+                    max_length=tokenizer.model_max_length,
+                    return_tensors="pt",
+                ).input_ids
+            # placeholder_token_id1
+            # print(placeholder_token_id1,'placeholder_token_id1')
+            if isinstance(placeholder_token_id1,list):
+                placeholder_token_id1=placeholder_token_id1[0]    
+
+
+            # eot_id=tokenizer.
+            is_keyword_tokens_list=input_ids==placeholder_token_id1
+            assert torch.sum(is_keyword_tokens_list)==len(is_keyword_tokens_list)
+            # print(is_keyword_tokens_list.shape,'is_keyword_tokens_list.shape')
+            # print(input_ids.shape,'input_ids.shape')
+            # print(tokenizer.eos_token_id,'eos_token_id',type(tokenizer.eos_token_id))
+            # print((input_ids==tokenizer.eos_token_id).float(),'input_ids==tokenizer.eos_token_id')
+            eos_idxs=(input_ids==tokenizer.eos_token_id).float().argmax(1)
+            eos_idxs=torch.clip(eos_idxs,None,(tokenizer.model_max_length-1))
+            # print(valid_tokens_list.shape,'valid_tokens_list')
+            # pdb.set_trace()
+            # eos_tokens_list[batch_indices, eos_idxs] = True
+            # print(eos_tokens_list,'eos_tokens_list')
+            # for prompt in prompts:
+            #     is_keyword_tokens=[False]
+            #     is_prior1=[False]
+            #     text_words=prompt.split()
+            #     for word_idx in range(len(text_words)):
+            #         cap_word=text_words[word_idx]
+            #         word_token_ids=tokenizer.encode(cap_word,add_special_tokens=False)
+            #         num_tokens=len(word_token_ids)
+            #         for tok_id in word_token_ids:
+            #             tok_decoded=tokenizer.decode(tok_id)
+            #             if args.placeholder_token1 == tok_decoded:
+            #                 is_keyword_tokens.append(True)
+            #             else:
+            #                 is_keyword_tokens.append(False)
+            #     for _ in range(len(is_keyword_tokens),tokenizer.model_max_length):
+            #         is_keyword_tokens.append(False)
+            #     assert len(is_keyword_tokens)==tokenizer.model_max_length
+            #     assert sum(is_keyword_tokens)==1
+            #     is_keyword_tokens=torch.BoolTensor(is_keyword_tokens)
+            #     is_keyword_tokens_list.append(is_keyword_tokens)
+            attn_mod_params={
+                'eos_idxs':eos_idxs,
+                'is_keyword_tokens1':is_keyword_tokens_list,
+                'distill':args.distill,
+                'lower':args.lower,
+                'prior_attn_prob_list':None,
+            }
             images = pipeline(
                             prompt=prompts, 
                             prompt_prior=prompts_prior,
@@ -327,9 +384,8 @@ def main(args):
                             guidance_scale=7.5, width=512, height=512,
                             num_images_per_prompt=1,
                             generator=generator,
-                            distill=args.distill,
+                            attn_mod_params=attn_mod_params,
                             ).images
-            
             # 
             num_cols=5
             num_viz_samples=5

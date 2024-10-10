@@ -11,7 +11,9 @@ parser.add_argument('--learned_embed_path1')
 parser.add_argument('--train_prior_concept1')
 parser.add_argument('--prompt')
 parser.add_argument('--dst_dir')
+parser.add_argument('--distill',type=float)
 parser.add_argument('--include_special',action='store_true')
+parser.add_argument('--include_all',action='store_true')
 args=parser.parse_args()
 os.makedirs(args.dst_dir,exist_ok=True)
 pretrained_model_name_or_path='runwayml/stable-diffusion-v1-5'
@@ -45,44 +47,56 @@ inputs=tokenizer(
             )
 print(tokenizer.eos_token_id,'eos_token_id')
 print(tokenizer.bos_token_id,'bos_token_id')
-input_ids = inputs['input_ids'][0]  # Tensor of token IDs
+input_ids = inputs['input_ids']  # Tensor of token IDs
+is_keyword_tokens_list=input_ids==placeholder_token_id1[0]
+assert torch.sum(is_keyword_tokens_list)==len(is_keyword_tokens_list)
+
+eos_idxs=(input_ids==tokenizer.eos_token_id).float().argmax(1)
+eos_idxs=torch.clip(eos_idxs,None,(tokenizer.model_max_length-1))
 non_bos=input_ids!=tokenizer.bos_token_id
 non_eos=input_ids!=tokenizer.eos_token_id
-print(non_eos,'non_eos')
 first_eos=torch.argmin(non_eos.float())
 nonspecial=torch.logical_and(non_bos,non_eos).reshape(-1)
-print(non_bos.shape,'non_bos.shape')
-print(non_eos.shape,'non_eos.shape')
-print(nonspecial.shape,'nonspecial.shape',torch.sum(nonspecial))
+# Pass the inputs through the model
+
 
 print(input_ids.shape,'input_ids.shape')
-# Pass the inputs through the model
-outputs = text_encoder(**inputs,output_attentions=True)
-attention = outputs.attentions  # Shape: (layers, batch, heads, tokens, tokens)
+with torch.no_grad():
+    outputs = text_encoder(**inputs,output_attentions=True,
+                        distill=args.distill,
+                        eos_tokens_list=eos_idxs,
+                        is_keyword_tokens1=is_keyword_tokens_list,
+    )
+    attention = outputs.attentions  # Shape: (layers, batch, heads, tokens, tokens)
 
-# Select a specific layer
-layer = 0  # Change this to visualize different layers
-if args.include_special:
-    nonspecial[0]=True
-    nonspecial[first_eos]=True
-for layer in range(12):
-    attn_weights = attention[layer][0]  # Shape: (heads, tokens, tokens)
+    # Select a specific layer
+    layer = 0  # Change this to visualize different layers
+    if args.include_special or args.include_all:
+        nonspecial[0]=True
+        nonspecial[first_eos]=True
 
-    avg_attn_weights = torch.mean(attn_weights, dim=0).detach().cpu() # Shape: (tokens, tokens)
-    tokens = tokenizer.convert_ids_to_tokens(input_ids)
-    tokens=[item.replace('</w>','')for item in tokens]
-    plt.figure(figsize=(8, 8))
-    print(avg_attn_weights.shape,'avg_attn_weights.shape1')
-    avg_attn_weights=avg_attn_weights[nonspecial][:,nonspecial]
-    avg_attn_weights=avg_attn_weights.numpy()
-    print(avg_attn_weights.shape,'avg_attn_weights.shape2')
-    im = plt.imshow(avg_attn_weights, cmap="viridis")
-    tokens=np.array(tokens)[nonspecial]
-    tokens=tokens.tolist()
-    plt.xticks(ticks=range(len(tokens)), labels=tokens, rotation=90)
-    plt.yticks(ticks=range(len(tokens)), labels=tokens)
-    plt.colorbar(im)
-    plt.title(f"Average Attention Map for Layer {layer + 1}")
-    plt.tight_layout()
-    plt.savefig("{}/average_attention_map_layer{}.png".format(args.dst_dir,layer+1))
-    # plt.show()
+    for layer in range(12):
+        attn_weights = attention[layer][0]  # Shape: (heads, tokens, tokens)
+
+        avg_attn_weights = torch.mean(attn_weights, dim=0).detach().cpu() # Shape: (tokens, tokens)
+        tokens = tokenizer.convert_ids_to_tokens(input_ids[0])
+        tokens=[item.replace('</w>','')for item in tokens]
+        plt.figure(figsize=(15, 15))
+        print(avg_attn_weights.shape,'avg_attn_weights.shape1')
+        if not args.include_all:
+            avg_attn_weights=avg_attn_weights[nonspecial][:,nonspecial]
+            # avg_attn_weights=avg_attn_weights[nonspecial][:,nonspecial]
+            tokens=np.array(tokens)[nonspecial]
+
+        avg_attn_weights=avg_attn_weights.numpy()
+        print(avg_attn_weights.shape,'avg_attn_weights.shape2')
+        im = plt.imshow(avg_attn_weights, cmap="viridis")
+        tokens=np.array(tokens)
+        tokens=tokens.tolist()
+        plt.xticks(ticks=range(len(tokens)), labels=tokens, rotation=90)
+        plt.yticks(ticks=range(len(tokens)), labels=tokens)
+        plt.colorbar(im)
+        plt.title(f"Average Attention Map for Layer {layer + 1}")
+        plt.tight_layout()
+        plt.savefig("{}/average_attention_map_layer{}.png".format(args.dst_dir,layer+1))
+        # plt.show()

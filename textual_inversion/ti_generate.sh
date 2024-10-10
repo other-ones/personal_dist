@@ -33,13 +33,16 @@ accelerate launch --main_process_port 2736  ti_generate.py \
   --train_prior_concept1='dog' \
   --eval_prior_concept1='dog' \
   --include_prior_concept=1 \
-  --eval_batch_size=5 \
-  --num_images_per_prompt=1  \
-  --dst_exp_path=tmp_baseline \
+  --eval_batch_size=2 \
+  --num_images_per_prompt=2  \
+  --dst_exp_path=tmp_distill05 \
   --eval_prompt_type='living' \
   --seed=7777 \
-  --distill=1 \
+  --distill=0.5 \
+  --modifier=cute \
   --benchmark_path='../datasets_pkgs/eval_prompts/dreambooth.json'
+
+  
 
 export CUBLAS_WORKSPACE_CONFIG=:4096:8;
 export DATA_DIR="/data/twkim/diffusion/personalization/collected/images/dog6";

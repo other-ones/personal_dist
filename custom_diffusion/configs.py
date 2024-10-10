@@ -5,6 +5,7 @@ import argparse
 def parse_args(input_args=None):
     parser = argparse.ArgumentParser(description="Simple example of a training script.")
     # ADDED
+    parser.add_argument('--caption_path',type=str)
     parser.add_argument('--modifier',type=str)
     parser.add_argument('--distill',type=float)
     parser.add_argument('--teaser_prompt',type=str)

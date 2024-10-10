@@ -312,14 +312,7 @@ class StableDiffusionPipelineDistill(DiffusionPipeline, TextualInversionLoaderMi
         negative_prompt_embeds: Optional[torch.FloatTensor] = None,
         lora_scale: Optional[float] = None,
         prompt_prior=None,
-        distill=0
-        # inj_embeddings1=None,
-        # inj_embeddings2=None,
-        # is_keyword_tokens1=None,
-        # is_keyword_tokens2=None,
-        # is_prior1=None,
-        # is_prior2=None,
-        # attn_mod_params=None,
+        attn_mod_params=None,
     ):
         r"""
         Encodes the prompt into text encoder hidden states.
@@ -400,25 +393,25 @@ class StableDiffusionPipelineDistill(DiffusionPipeline, TextualInversionLoaderMi
                 )
                 text_input_ids_prior = text_inputs_prior.input_ids
                 prompt_embeds_prior = self.text_encoder(
-                    text_input_ids_prior.to(device),
+                    input_ids=text_input_ids_prior.to(device),
                     attention_mask=attention_mask,
                     output_attentions=True
                 )
                 prior_attn_prob_list=prompt_embeds_prior.attentions
-                print(len(prior_attn_prob_list),'prior_attn_prob_list pipeline')
-                
-            else:
-                prior_attn_prob_list=None
+                attn_mod_params['prior_attn_prob_list']=prior_attn_prob_list
+            # else:
+            #     attn_mod_params['prior_attn_prob_list']=None
+
             # 
             # prior_attn_prob_list=None
-            print(prompt_prior,'prompt_prior pipeline')
-            print(prompt,'prompt pipeline')
+            # print(prompt_prior,'prompt_prior pipeline')
+            # print(prompt,'prompt pipeline')
+            # print(eos_tokens_list,'eos_tokens_list pipeline')
             prompt_embeds = self.text_encoder(
                 text_input_ids.to(device),
                 attention_mask=attention_mask,
                 output_attentions=True,
-                prior_attn_prob_list=prior_attn_prob_list,
-                distill=distill
+                attn_mod_params=attn_mod_params,
             )
             attentions=prompt_embeds.attentions
             
@@ -625,14 +618,7 @@ class StableDiffusionPipelineDistill(DiffusionPipeline, TextualInversionLoaderMi
         cross_attention_kwargs: Optional[Dict[str, Any]] = None,
         guidance_rescale: float = 0.0,
         silent=False,
-        inj_embeddings1= None,
-        inj_embeddings2= None,
-        is_keyword_tokens1= None,
-        is_keyword_tokens2= None,
-        distill = 0,
-        # is_prior1= None,
-        # is_prior2= None,
-        # attn_mod_params= None,
+        attn_mod_params= None,
     ):
         r"""
         Function invoked when calling the pipeline for generation.
@@ -746,14 +732,7 @@ class StableDiffusionPipelineDistill(DiffusionPipeline, TextualInversionLoaderMi
             negative_prompt_embeds=negative_prompt_embeds,
             lora_scale=text_encoder_lora_scale,
             prompt_prior=prompt_prior,
-            distill=distill,
-            # inj_embeddings1=inj_embeddings1,
-            # inj_embeddings2=inj_embeddings2,
-            # is_keyword_tokens1=is_keyword_tokens1,
-            # is_keyword_tokens2=is_keyword_tokens2,
-            # is_prior1=is_prior1,
-            # is_prior2=is_prior2,
-            # attn_mod_params=attn_mod_params,
+            attn_mod_params=attn_mod_params,
         )
         # pdb.set_trace() 
         # 4. Prepare timesteps

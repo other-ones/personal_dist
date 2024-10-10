@@ -1,0 +1,917 @@
+<new1> is analyzed by Cleopatra
+<new1> is analyzed by a king
+<new1> is analyzed by an acrobat
+<new1> is assembled by a knight
+<new1> is assembled by an a soldier
+<new1> is assembled by an astronaut
+<new1> is auctioned by Beethoven
+<new1> is auctioned by Genghis Khan
+<new1> is auctioned by Mahatma Gandhi
+<new1> is auctioned by a gardener
+<new1> is auctioned by a hunter
+<new1> is auctioned by a librarian
+<new1> is carved into ice by a programmer
+<new1> is carved into ice by an android
+<new1> is carved into ice by an explorer
+<new1> is carved into marble by Genghis Khan
+<new1> is carved into marble by Marco Polo
+<new1> is carved into marble by a king
+<new1> is carved into marble by an artist
+<new1> is carved into stone by Martin Luther King Jr.
+<new1> is carved into wood by Socrates
+<new1> is carved into wood by a fisherman
+<new1> is carved into wood by a ninja
+<new1> is carved into wood by a writer
+<new1> is cleaned by Marco Polo
+<new1> is cleaned by Mozart
+<new1> is cleaned by Stephen Hawking
+<new1> is cleaned by a vampire
+<new1> is cleaned by an astronaut
+<new1> is engraved by a ninja
+<new1> is engraved by a programmer
+<new1> is evaluated by a chef
+<new1> is evaluated by a priest
+<new1> is evaluated by a scientist
+<new1> is evaluated by an architect
+<new1> is examined by an engineer
+<new1> is filmed by an astronaut
+<new1> is implemented by Abraham Lincoln
+<new1> is implemented by a gardener
+<new1> is inspected by Cleopatra
+<new1> is inspected by Leonardo da Vinci
+<new1> is juggled by Frida Kahlo
+<new1> is juggled by Leonardo da Vinci
+<new1> is juggled by a monk
+<new1> is juggled by an athlete
+<new1> is modified by Albert Einstein
+<new1> is modified by Socrates
+<new1> is modified by Vincent van Gogh
+<new1> is modified by a jeweler
+<new1> is modified by a smith
+<new1> is modified by an architect
+<new1> is packaged by a mercenary
+<new1> is packaged by a scientist
+<new1> is packaged by an engineer
+<new1> is painted by Mahatma Gandhi
+<new1> is painted by a programmer
+<new1> is painted by an alien
+<new1> is photographed by Beethoven
+<new1> is photographed by Mozart
+<new1> is photographed by a chef
+<new1> is photographed by a prince
+<new1> is photographed by a smith
+<new1> is polished by a politician
+<new1> is presented by a magician
+<new1> is protected by Leonardo da Vinci
+<new1> is protected by a smith
+<new1> is protected by a wizard
+<new1> is protected by an android
+<new1> is recorded by Cleopatra
+<new1> is recorded by a prince
+<new1> is recorded by a queen
+<new1> is recorded by a smith
+<new1> is recorded by a superhero
+<new1> is repaired by a prince
+<new1> is researched by Mahatma Gandhi
+<new1> is researched by Mozart
+<new1> is researched by Pablo Picasso
+<new1> is researched by Queen Elizabeth
+<new1> is researched by a chef
+<new1> is researched by a hunter
+<new1> is researched by a mercenary
+<new1> is restored by a magician
+<new1> is restored by an explorer
+<new1> is sketched by Cleopatra
+<new1> is sketched by Mozart
+<new1> is sketched by a king
+<new1> is sketched by a nurse
+<new1> is transported by a farmer
+<new1> is transported by a jeweler
+<new1> is transported by an artist
+Abraham Lincoln is auctioning <new1>
+Abraham Lincoln is juggling <new1>
+Abraham Lincoln is painting <new1>
+Albert Einstein is evaluating <new1>
+Albert Einstein is photographing <new1>
+Albert Einstein is repairing <new1>
+Aristotle is evaluating <new1>
+Aristotle is inspecting <new1>
+Aristotle is modifying <new1>
+Aristotle is packaging <new1>
+Beethoven is analyzing <new1>
+Beethoven is juggling <new1>
+Cleopatra is scanning <new1>
+Frida Kahlo is filming <new1>
+Galileo Galilei is carving stone into <new1>
+Galileo Galilei is recording <new1>
+Genghis Khan is evaluating <new1>
+Mahatma Gandhi is auctioning <new1>
+Mahatma Gandhi is painting <new1>
+Marco Polo is recording <new1>
+Marco Polo is repairing <new1>
+Marco Polo is restoring <new1>
+Marie Curie is carving stone into <new1>
+Marie Curie is protecting <new1>
+Marie Curie is restoring <new1>
+Mozart is carving stone into <new1>
+Mozart is transporting <new1>
+Queen Elizabeth is giving a presentation on <new1>
+Queen Elizabeth is sketching <new1>
+Stephen Hawking is packaging <new1>
+Stephen Hawking is scanning <new1>
+Tutankhamun is analyzing <new1>
+Vincent van Gogh is analyzing <new1>
+Vincent van Gogh is evaluating <new1>
+Vincent van Gogh is examining <new1>
+William Shakespeare is packaging <new1>
+William Shakespeare is recording <new1>
+William Shakespeare is scanning <new1>
+Winston Churchill is transporting <new1>
+a bard is analyzing <new1>
+a bard is packaging <new1>
+a bard is scanning <new1>
+a chef is photographing <new1>
+a chef is recording <new1>
+a cyborg is assembling <new1>
+a cyborg is giving a presentation on <new1>
+a detective is painting <new1>
+a detective is transporting <new1>
+a doctor is engraving <new1>
+a doctor is filming <new1>
+a doctor is inspecting <new1>
+a farmer is carving wood into <new1>
+a farmer is examining <new1>
+a fisherman is engraving <new1>
+a gardener is cleaning <new1>
+a hunter is filming <new1>
+a hunter is transporting <new1>
+a jeweler is modifying <new1>
+a king is cleaning <new1>
+a knight is carving stone into <new1>
+a knight is carving wood into <new1>
+a knight is inspecting <new1>
+a librarian is protecting <new1>
+a monk is filming <new1>
+a monk is juggling <new1>
+a monk is protecting <new1>
+a ninja is modifying <new1>
+a ninja is sketching <new1>
+a pilot is evaluating <new1>
+a pilot is giving a presentation on <new1>
+a pilot is transporting <new1>
+a politician is analyzing <new1>
+a politician is restoring <new1>
+a priest is auctioning <new1>
+a priest is implementing <new1>
+a priest is packaging <new1>
+a priest is protecting <new1>
+a priest is restoring <new1>
+a priest is transporting <new1>
+a princess is researching <new1>
+a programmer is auctioning <new1>
+a programmer is engraving <new1>
+a programmer is implementing <new1>
+a programmer is photographing <new1>
+a queen is packaging <new1>
+a robot is sketching <new1>
+a sailor is juggling <new1>
+a sailor is painting <new1>
+a sailor is researching <new1>
+a samurai is assembling <new1>
+a samurai is packaging <new1>
+a samurai is transporting <new1>
+a scientist is assembling <new1>
+a scientist is restoring <new1>
+a smith is engraving <new1>
+a trader is recording <new1>
+a vampire is inspecting <new1>
+a wizard is giving a presentation on <new1>
+an acrobat is carving marble into <new1>
+an alien is carving wood into <new1>
+an android is examining <new1>
+an android is protecting <new1>
+an architect is examining <new1>
+an architect is sketching <new1>
+an artist is carving ice into <new1>
+an athlete is evaluating <new1>
+an athlete is photographing <new1>
+an athlete is recording <new1>
+an explorer is inspecting <new1>
+an explorer is researching <new1>
+<new1> above a charcoal model train
+<new1> above a charcoal vinyl record
+<new1> above a coral wallet
+<new1> above a gold camera
+<new1> above a green stopwatch
+<new1> above a magenta bow and arrow
+<new1> above a magenta keychain
+<new1> above a magenta screwdriver
+<new1> above a orange sewing machine
+<new1> above a silver sofa
+<new1> above a teal stuffed animal
+<new1> above a white suitcase
+<new1> adjacent to a blue wallet
+<new1> adjacent to a brown sewing machine
+<new1> adjacent to a coral yoga mat
+<new1> adjacent to a cyan basketball
+<new1> adjacent to a green belt
+<new1> adjacent to a maroon smartphone
+<new1> adjacent to a navy stuffed animal
+<new1> adjacent to a purple chandelier
+<new1> adjacent to a red vinyl record
+<new1> adjacent to a teal smartphone
+<new1> adjacent to a turquoise musical instrument
+<new1> adjacent to a white watch
+<new1> against a brown boots
+<new1> against a brown fishing rod
+<new1> against a charcoal typewriter
+<new1> against a olive snowboard
+<new1> against a orange pencil
+<new1> against a red sofa
+<new1> against a silver vinyl record
+<new1> alongside a brown garden tools
+<new1> alongside a maroon skis
+<new1> alongside a turquoise bicycle
+<new1> atop a beige makeup brush
+<new1> atop a charcoal keychain
+<new1> atop a gray spaceship
+<new1> atop a ivory basketball
+<new1> atop a ivory candle
+<new1> atop a ivory coin
+<new1> atop a ivory yoga mat
+<new1> atop a maroon necklace
+<new1> atop a maroon notebook
+<new1> atop a maroon snowboard
+<new1> atop a navy coin
+<new1> atop a purple pencil
+<new1> atop a silver sofa
+<new1> atop a turquoise model train
+<new1> atop a yellow typewriter
+<new1> behind a beige eyeglasses
+<new1> behind a cyan fishing rod
+<new1> behind a gold scarf
+<new1> behind a gray belt
+<new1> behind a ivory vinyl record
+<new1> behind a magenta candle
+<new1> behind a orange ancient manuscript
+<new1> behind a orange puzzle
+<new1> behind a silver fan
+<new1> behind a teal dice
+<new1> behind a turquoise typewriter
+<new1> behind a yellow drone
+<new1> below a blue fishing rod
+<new1> below a green binoculars
+<new1> below a green spaceship
+<new1> below a lime coin
+<new1> below a magenta hat
+<new1> below a olive chessboard
+<new1> below a orange chessboard
+<new1> below a orange eyeglasses
+<new1> below a silver pearls
+<new1> below a teal ancient manuscript
+<new1> below a teal basketball
+<new1> below a turquoise fishing rod
+<new1> beneath a beige pearls
+<new1> beneath a brown book
+<new1> beneath a charcoal skis
+<new1> beneath a cyan dice
+<new1> beneath a lime magic wand
+<new1> beneath a magenta motorcycle
+<new1> beneath a maroon makeup brush
+<new1> beneath a maroon wallet
+<new1> beneath a navy smartphone
+<new1> beneath a olive musical score
+<new1> beneath a orange musical score
+<new1> beneath a silver microscope
+<new1> beneath a turquoise scarf
+<new1> beneath a white pillow
+<new1> beneath a yellow basketball
+<new1> beside a black watch
+<new1> beside a brown eyeglasses
+<new1> beside a brown map
+<new1> beside a brown pearls
+<new1> beside a gray wristband
+<new1> beside a navy notebook
+<new1> beside a red scarf
+<new1> beside a silver helmet
+<new1> beside a silver smartphone
+<new1> in front of a blue skateboard
+<new1> in front of a charcoal basketball
+<new1> in front of a gold watch
+<new1> in front of a gray wallet
+<new1> in front of a ivory globe
+<new1> in front of a ivory stopwatch
+<new1> in front of a lime notebook
+<new1> in front of a olive paintbrush
+<new1> in front of a orange book
+<new1> in front of a purple spaceship
+<new1> in front of a red spaceship
+<new1> in front of a red wristband
+<new1> in front of a turquoise yoga mat
+<new1> near a brown wallet
+<new1> near a charcoal bicycle
+<new1> near a gray notebook
+<new1> near a green ancient manuscript
+<new1> near a lime binoculars
+<new1> near a olive basketball
+<new1> near a olive wristband
+<new1> near a silver ancient manuscript
+<new1> near a turquoise chessboard
+<new1> next to a beige yoga mat
+<new1> next to a blue snowboard
+<new1> next to a charcoal spaceship
+<new1> next to a cyan suitcase
+<new1> next to a gray spaceship
+<new1> next to a green book
+<new1> next to a green flashlight
+<new1> next to a green motorcycle
+<new1> next to a green notebook
+<new1> next to a green pillow
+<new1> next to a green stamp
+<new1> next to a lime makeup brush
+<new1> next to a maroon wristband
+<new1> next to a navy map
+<new1> next to a navy yoga mat
+<new1> next to a olive spaceship
+<new1> next to a purple microscope
+<new1> next to a silver fan
+<new1> on top of a blue drone
+<new1> on top of a brown pen
+<new1> on top of a brown skateboard
+<new1> on top of a ivory sofa
+<new1> on top of a magenta laptop
+<new1> on top of a silver skis
+<new1> on top of a teal stamp
+<new1> on top of a teal stuffed animal
+<new1> on top of a white chessboard
+<new1> over a black fishing rod
+<new1> over a gray chandelier
+<new1> over a ivory chandelier
+<new1> over a magenta candle
+<new1> over a navy drone
+<new1> over a navy microscope
+<new1> over a olive laptop
+<new1> over a orange basketball
+<new1> over a orange wristband
+<new1> over a white painting
+<new1> surrounding a blue makeup brush
+<new1> surrounding a cyan hat
+<new1> surrounding a ivory sewing machine
+<new1> surrounding a olive painting
+<new1> surrounding a orange surfboard
+<new1> surrounding a red wristband
+<new1> surrounding a silver microscope
+<new1> surrounding a yellow necklace
+<new1> to the left of a black basketball
+<new1> to the left of a black stopwatch
+<new1> to the left of a blue garden tools
+<new1> to the left of a charcoal binoculars
+<new1> to the left of a cyan snowboard
+<new1> to the left of a gold book
+<new1> to the left of a gold chandelier
+<new1> to the left of a gold chessboard
+<new1> to the left of a ivory microscope
+<new1> to the left of a lime musical score
+<new1> to the left of a maroon wristband
+<new1> to the left of a olive sandal
+<new1> to the left of a purple spaceship
+<new1> to the left of a purple suitcase
+<new1> to the left of a teal necklace
+<new1> to the right of a black sewing machine
+<new1> to the right of a brown sofa
+<new1> to the right of a brown telescope
+<new1> to the right of a magenta paintbrush
+<new1> to the right of a olive belt
+<new1> to the right of a silver boots
+<new1> to the right of a yellow musical instrument
+<new1> under a black ancient manuscript
+<new1> under a gold stopwatch
+<new1> under a gray camera
+<new1> under a green helmet
+<new1> under a green stopwatch
+<new1> under a lime ancient manuscript
+<new1> under a lime paintbrush
+<new1> under a magenta fishing rod
+<new1> under a maroon sewing machine
+<new1> under a silver binoculars
+<new1> under a teal perfume bottle
+<new1> under a teal sculpture
+<new1> under a turquoise dice
+<new1> under a white makeup brush
+<new1> at Eiffel Tower
+<new1> at Las Vegas Strip
+<new1> at Middle Ages Scottish castle
+<new1> at Paris cafe
+<new1> at Roman Colosseum
+<new1> at Silicon Valley tech lab
+<new1> at Times Square
+<new1> at ancient Neolithic henge
+<new1> at coral reef
+<new1> at electric rock concert
+<new1> at exotic South American jungle
+<new1> at high-speed car racing track
+<new1> at historic city bridge
+<new1> at iconic Hollywood Boulevard
+<new1> at idyllic Pacific island
+<new1> at international space station
+<new1> at isolated desert highway
+<new1> at large airplane hangar
+<new1> at legendary Wild West saloon
+<new1> at lively street market
+<new1> at lunar base
+<new1> at lush vineyard
+<new1> at medieval castle
+<new1> at modern Singapore skyline
+<new1> at mysterious Gothic castle
+<new1> at mysterious underground cave
+<new1> at nomadic Mongolian steppe
+<new1> at old European cobblestone street
+<new1> at opulent Monaco casino
+<new1> at royal court of Versailles
+<new1> at secluded Amazonian lodge
+<new1> at serene city park
+<new1> at soulful New Orleans jazz club
+<new1> at space exhibition
+<new1> at space-age Tokyo district
+<new1> at steep mountain pass
+<new1> at submarine under the Arctic
+<new1> at sun-drenched California vineyard
+<new1> at thick deep forest
+<new1> at time-worn ancient Greek temple
+<new1> at top of a modern skyscraper
+<new1> at traditional Maori village
+<new1> at traditional Turkish bath
+<new1> at tranquil rooftop garden
+<new1> at vibrant Rio de Janeiro carnival
+<new1> at wild Scottish highland
+<new1> captured with the Amazon rainforest in the background
+<new1> captured with the Caribbean beach in the background
+<new1> captured with the Grand Canyon in the background
+<new1> captured with the Hollywood movie set in the background
+<new1> captured with the Isolated Icelandic hot spring in the background
+<new1> captured with the Las Vegas Strip in the background
+<new1> captured with the Mount Everest base in the background
+<new1> captured with the North Pole in the background
+<new1> captured with the Paris cafe in the background
+<new1> captured with the Roman Colosseum in the background
+<new1> captured with the Scandinavian minimalist kitchen in the background
+<new1> captured with the Silicon Valley tech lab in the background
+<new1> captured with the active volcanic crater in the background
+<new1> captured with the ancient Egyptian tomb in the background
+<new1> captured with the ancient Greek agora in the background
+<new1> captured with the bustling International Space Station in the background
+<new1> captured with the bustling Middle Eastern bazaar in the background
+<new1> captured with the bustling college campus in the background
+<new1> captured with the busy factory floor in the background
+<new1> captured with the coral reef in the background
+<new1> captured with the crumbling ancient ruins in the background
+<new1> captured with the cutting-edge Arctic research station in the background
+<new1> captured with the eclectic antique shop in the background
+<new1> captured with the electric rock concert in the background
+<new1> captured with the elegant Russian ballet stage in the background
+<new1> captured with the energetic Brazilian carnival in the background
+<new1> captured with the enigmatic Stonehenge in the background
+<new1> captured with the exotic South American jungle in the background
+<new1> captured with the high-powered corporate office in the background
+<new1> captured with the historic Pilgrim landing site in the background
+<new1> captured with the industrial manufacturing zone in the background
+<new1> captured with the isolated desert highway in the background
+<new1> captured with the legendary Wild West saloon in the background
+<new1> captured with the majestic European cathedral in the background
+<new1> captured with the majestic Mount Olympus in the background
+<new1> captured with the medieval European market in the background
+<new1> captured with the mega shopping mall in the background
+<new1> captured with the mysterious Gothic castle in the background
+<new1> captured with the mythical underwater Atlantis in the background
+<new1> captured with the natural Appalachian trail in the background
+<new1> captured with the old European cobblestone street in the background
+<new1> captured with the picturesque Swiss mountain town in the background
+<new1> captured with the quaint French vineyard in the background
+<new1> captured with the remote arctic village in the background
+<new1> captured with the royal court of Versailles in the background
+<new1> captured with the sleek modern office in the background
+<new1> captured with the space exhibition in the background
+<new1> captured with the space-age Tokyo district in the background
+<new1> captured with the stark Mexican desert in the background
+<new1> captured with the sunset beach in the background
+<new1> captured with the top of a modern skyscraper in the background
+<new1> captured with the towering downtown skyscraper in the background
+<new1> captured with the utopian space colony in the background
+<new1> captured with the vibrant Rio de Janeiro carnival in the background
+<new1> viewed with the Amazon rainforest
+<new1> viewed with the Antarctic ice field
+<new1> viewed with the Australian Outback
+<new1> viewed with the Caribbean beach
+<new1> viewed with the Eiffel Tower
+<new1> viewed with the Hollywood movie set
+<new1> viewed with the Isolated Icelandic hot spring
+<new1> viewed with the Las Vegas Strip
+<new1> viewed with the Mount Everest base
+<new1> viewed with the Paris cafe
+<new1> viewed with the Roman Colosseum
+<new1> viewed with the Scandinavian minimalist kitchen
+<new1> viewed with the Silicon Valley tech lab
+<new1> viewed with the abandoned amusement park
+<new1> viewed with the ancient Egyptian tomb
+<new1> viewed with the ancient Greek agora
+<new1> viewed with the dungeon beneath medieval castle
+<new1> viewed with the eclectic antique shop
+<new1> viewed with the elegant luxury hotel lobby
+<new1> viewed with the endless Siberian railway
+<new1> viewed with the enigmatic Stonehenge
+<new1> viewed with the futuristic neon-lit city
+<new1> viewed with the historic city bridge
+<new1> viewed with the industrial manufacturing zone
+<new1> viewed with the isolated desert highway
+<new1> viewed with the large airplane hangar
+<new1> viewed with the majestic European cathedral
+<new1> viewed with the mythical underwater Atlantis
+<new1> viewed with the nomadic Mongolian steppe
+<new1> viewed with the old European cobblestone street
+<new1> viewed with the opulent Monaco casino
+<new1> viewed with the opulent Oriental palace
+<new1> viewed with the packed football stadium
+<new1> viewed with the picturesque Swiss mountain town
+<new1> viewed with the quaint French vineyard
+<new1> viewed with the remote arctic village
+<new1> viewed with the royal court of Versailles
+<new1> viewed with the space exhibition
+<new1> viewed with the space-age Tokyo district
+<new1> viewed with the submarine under the Arctic
+<new1> viewed with the sunset beach
+<new1> viewed with the top of a modern skyscraper
+<new1> viewed with the tranquil Swedish forest
+<new1> viewed with the urban chic rooftop
+<new1> viewed with the vast African savannah
+<new1> with the Alaskan tundra in the background
+<new1> with the Amazon rainforest in the background
+<new1> with the Australian Outback in the background
+<new1> with the Caribbean beach in the background
+<new1> with the Las Vegas Strip in the background
+<new1> with the Middle Ages Scottish castle in the background
+<new1> with the Mount Everest base in the background
+<new1> with the Old West ghost town in the background
+<new1> with the Roman Colosseum in the background
+<new1> with the Scandinavian minimalist kitchen in the background
+<new1> with the active volcanic crater in the background
+<new1> with the ancient Greek agora in the background
+<new1> with the ancient Neolithic henge in the background
+<new1> with the bustling Middle Eastern bazaar in the background
+<new1> with the bustling college campus in the background
+<new1> with the coral reef in the background
+<new1> with the crowded metro station in the background
+<new1> with the crumbling ancient ruins in the background
+<new1> with the foreboding deep sea trench in the background
+<new1> with the high-speed car racing track in the background
+<new1> with the historic city bridge in the background
+<new1> with the iconic Hollywood Boulevard in the background
+<new1> with the idyllic Pacific island in the background
+<new1> with the innovative Berlin tech hub in the background
+<new1> with the international space station in the background
+<new1> with the lunar base in the background
+<new1> with the lush vineyard in the background
+<new1> with the luxury Mediterranean yacht in the background
+<new1> with the majestic Mount Olympus in the background
+<new1> with the medieval European market in the background
+<new1> with the mega shopping mall in the background
+<new1> with the modern Singapore skyline in the background
+<new1> with the mysterious underground cave in the background
+<new1> with the mythical underwater Atlantis in the background
+<new1> with the opulent Monaco casino in the background
+<new1> with the packed football stadium in the background
+<new1> with the picturesque Swiss mountain town in the background
+<new1> with the quaint French vineyard in the background
+<new1> with the quiet suburban neighborhood in the background
+<new1> with the remote mountain valley in the background
+<new1> with the rural farm in the background
+<new1> with the seaside boardwalk in the background
+<new1> with the secluded Amazonian lodge in the background
+<new1> with the secluded Zen garden in the background
+<new1> with the serene city park in the background
+<new1> with the space-age Tokyo district in the background
+<new1> with the spacious old warehouse in the background
+<new1> with the stark Mexican desert in the background
+<new1> with the steep mountain pass in the background
+<new1> with the sunset beach in the background
+<new1> with the swashbuckling pirate ship in the background
+<new1> with the time-worn ancient Greek temple in the background
+<new1> with the top of a modern skyscraper in the background
+<new1> with the vibrant Cuban cigar lounge in the background
+<new1> with the vibrant digital world in the background
+<new1> captured in the Acrylic style
+<new1> captured in the Algorithmic Art style
+<new1> captured in the Anime style
+<new1> captured in the Art Brut style
+<new1> captured in the Art Deco style
+<new1> captured in the Art Nouveau style
+<new1> captured in the Augmented Reality Art style
+<new1> captured in the Baroque style
+<new1> captured in the Byzantine style
+<new1> captured in the Charcoal style
+<new1> captured in the Collage style
+<new1> captured in the Comic style
+<new1> captured in the Constructivism style
+<new1> captured in the Contemporary style
+<new1> captured in the Decorative style
+<new1> captured in the Engraving style
+<new1> captured in the Environmental style
+<new1> captured in the Existential Art style
+<new1> captured in the Expressionism style
+<new1> captured in the Generative Art style
+<new1> captured in the Geometric style
+<new1> captured in the Gothic Revival style
+<new1> captured in the Gothic style
+<new1> captured in the Historic style
+<new1> captured in the Hypermodernism style
+<new1> captured in the Hyperrealism style
+<new1> captured in the Ink style
+<new1> captured in the Installation Art style
+<new1> captured in the Land Art style
+<new1> captured in the Magic Realism style
+<new1> captured in the Mid-Century Modern style
+<new1> captured in the Minimalism style
+<new1> captured in the Monochrome style
+<new1> captured in the Narrative style
+<new1> captured in the Naïve Art style
+<new1> captured in the Pencil style
+<new1> captured in the Performance Art style
+<new1> captured in the Photorealism style
+<new1> captured in the Postmodernism style
+<new1> captured in the Psychedelic style
+<new1> captured in the Romantic style
+<new1> captured in the Rustic style
+<new1> captured in the Screenprint style
+<new1> captured in the Sketch style
+<new1> captured in the Soundwave Art style
+<new1> captured in the Steampunk style
+<new1> captured in the Stencil style
+<new1> captured in the Street Art style
+<new1> captured in the Surrealism style
+<new1> captured in the Surrealist Pop style
+<new1> captured in the Sustainable Art style
+<new1> captured in the Symbolism style
+<new1> captured in the Tempera style
+<new1> captured in the Transhuman Art style
+<new1> captured in the Ukiyo-e style
+<new1> captured in the Vexel style
+<new1> captured in the Video Art style
+<new1> captured in the Vintage style
+<new1> captured in the Virtual Reality Art style
+<new1> captured in the Virtual style
+<new1> captured in the Watercolor style
+<new1> depicted in the 3D Rendering style
+<new1> depicted in the Abstract Expressionism style
+<new1> depicted in the Abstract style
+<new1> depicted in the Acrylic style
+<new1> depicted in the Anime style
+<new1> depicted in the Architectural style
+<new1> depicted in the Art Brut style
+<new1> depicted in the Art Nouveau style
+<new1> depicted in the Assemblage style
+<new1> depicted in the Bauhaus style
+<new1> depicted in the Bio Art style
+<new1> depicted in the Byzantine style
+<new1> depicted in the Cartoon style
+<new1> depicted in the Charcoal style
+<new1> depicted in the Claymation style
+<new1> depicted in the Comic style
+<new1> depicted in the Concept Art style
+<new1> depicted in the Conceptual Art style
+<new1> depicted in the Constructivism style
+<new1> depicted in the Contemporary style
+<new1> depicted in the Digital style
+<new1> depicted in the Ecological Art style
+<new1> depicted in the Engraving style
+<new1> depicted in the Existential Art style
+<new1> depicted in the Expressionism style
+<new1> depicted in the Futurism style
+<new1> depicted in the Generative Art style
+<new1> depicted in the Gothic style
+<new1> depicted in the Green Art style
+<new1> depicted in the Historic style
+<new1> depicted in the Hypermodernism style
+<new1> depicted in the Hyperrealism style
+<new1> depicted in the Impressionism style
+<new1> depicted in the Industrial style
+<new1> depicted in the Ink style
+<new1> depicted in the Installation Art style
+<new1> depicted in the Interactive Art style
+<new1> depicted in the Kinetic style
+<new1> depicted in the Land Art style
+<new1> depicted in the Landscape style
+<new1> depicted in the Lowbrow Art style
+<new1> depicted in the Magic Realism style
+<new1> depicted in the Metaphysical Art style
+<new1> depicted in the Mid-Century Modern style
+<new1> depicted in the Minimalism style
+<new1> depicted in the Modernism style
+<new1> depicted in the Neo-Impressionism style
+<new1> depicted in the Net Art style
+<new1> depicted in the Oil style
+<new1> depicted in the Panoramic style
+<new1> depicted in the Pencil style
+<new1> depicted in the Performance Art style
+<new1> depicted in the Photorealism style
+<new1> depicted in the Post-Impressionism style
+<new1> depicted in the Psychedelic style
+<new1> depicted in the Scenic style
+<new1> depicted in the Sketch style
+<new1> depicted in the Social Realism style
+<new1> depicted in the Soundwave Art style
+<new1> depicted in the Steampunk style
+<new1> depicted in the Sustainable Art style
+<new1> depicted in the Transhuman Art style
+<new1> depicted in the Vector Art style
+<new1> depicted in the Vexel style
+<new1> depicted in the Vintage style
+<new1> depicted in the Virtual Reality Art style
+<new1> depicted in the Virtual style
+<new1> depicted in the Visionary Art style
+<new1> depicted in the Watercolor style
+<new1> depicted in the Woodcut style
+<new1> rendered in the 3D Rendering style
+<new1> rendered in the Abstract Expressionism style
+<new1> rendered in the Abstract style
+<new1> rendered in the Anime style
+<new1> rendered in the Art Deco style
+<new1> rendered in the Art Nouveau style
+<new1> rendered in the Assemblage style
+<new1> rendered in the Bio Art style
+<new1> rendered in the Cartoon style
+<new1> rendered in the Claymation style
+<new1> rendered in the Collage style
+<new1> rendered in the Comic style
+<new1> rendered in the Concept Art style
+<new1> rendered in the Conceptual Art style
+<new1> rendered in the Constructivism style
+<new1> rendered in the Contemporary style
+<new1> rendered in the Cosmic style
+<new1> rendered in the Cyberpunk style
+<new1> rendered in the Decorative style
+<new1> rendered in the Earth Art style
+<new1> rendered in the Engraving style
+<new1> rendered in the Fauvism style
+<new1> rendered in the Futurism style
+<new1> rendered in the Geometric style
+<new1> rendered in the Glitch Art style
+<new1> rendered in the Gothic Revival style
+<new1> rendered in the Graffiti style
+<new1> rendered in the Hypermodernism style
+<new1> rendered in the Hypernaturalism style
+<new1> rendered in the Impressionism style
+<new1> rendered in the Ink style
+<new1> rendered in the Interactive Art style
+<new1> rendered in the Land Art style
+<new1> rendered in the Landscape style
+<new1> rendered in the Lowbrow Art style
+<new1> rendered in the Mid-Century Modern style
+<new1> rendered in the Minimalism style
+<new1> rendered in the Narrative style
+<new1> rendered in the Naturalistic style
+<new1> rendered in the Naïve Art style
+<new1> rendered in the Outsider Art style
+<new1> rendered in the Panoramic style
+<new1> rendered in the Pastel style
+<new1> rendered in the Pencil style
+<new1> rendered in the Performance Art style
+<new1> rendered in the Photorealism style
+<new1> rendered in the Pixel Art style
+<new1> rendered in the Pop Art style
+<new1> rendered in the Portraiture style
+<new1> rendered in the Post-Impressionism style
+<new1> rendered in the Pseudorealism style
+<new1> rendered in the Psychedelic style
+<new1> rendered in the Retro Futurism style
+<new1> rendered in the Romantic style
+<new1> rendered in the Rustic style
+<new1> rendered in the Sketch style
+<new1> rendered in the Social Realism style
+<new1> rendered in the Sound Art style
+<new1> rendered in the Stencil Art style
+<new1> rendered in the Stencil style
+<new1> rendered in the Street Art style
+<new1> rendered in the Tempera style
+<new1> rendered in the Textile Art style
+<new1> rendered in the Transhuman Art style
+<new1> rendered in the Urban style
+<new1> rendered in the Vector Art style
+<new1> rendered in the Vexel style
+<new1> rendered in the Virtual style
+<new1> rendered in the Woodcut style
+a 3D printed model of <new1>
+a <new1> in a arrow shape
+a <new1> in a cone shape
+a <new1> in a crescent shape
+a <new1> in a cross shape
+a <new1> in a cube shape
+a <new1> in a cylinder shape
+a <new1> in a diamond shape
+a <new1> in a flower shape
+a <new1> in a heart shape
+a <new1> in a hexagon shape
+a <new1> in a leaf shape
+a <new1> in a octagon shape
+a <new1> in a oval shape
+a <new1> in a pyramid shape
+a <new1> in a rectangular shape
+a <new1> in a sphere shape
+a <new1> in a star shape
+a <new1> in a triangular shape
+a arrow shaped <new1>
+a beige <new1>
+a beige colored <new1>
+a black <new1>
+a black colored <new1>
+a blue <new1>
+a blue colored <new1>
+a bronze casting of <new1>
+a bronze relief of <new1>
+a brown <new1>
+a brown colored <new1>
+a butter sculpture of <new1>
+a cake topper of <new1>
+a ceramic statue of <new1>
+a chalk drawing of <new1>
+a charcoal <new1>
+a charcoal colored <new1>
+a chocolate mold of <new1>
+a clay mold of <new1>
+a cone shaped <new1>
+a cookie cutter of <new1>
+a coral <new1>
+a coral colored <new1>
+a crescent shaped <new1>
+a cross shaped <new1>
+a crystal figurine of <new1>
+a cube shaped <new1>
+a cyan <new1>
+a cyan colored <new1>
+a cylinder shaped <new1>
+a diamond shaped <new1>
+a embroidered patch of <new1>
+a fireworks of <new1>
+a flower shaped <new1>
+a fruit carving of <new1>
+a garden hedge of <new1>
+a glass etching of <new1>
+a gold <new1>
+a gold colored <new1>
+a gray <new1>
+a gray colored <new1>
+a green <new1>
+a green colored <new1>
+a heart shaped <new1>
+a hexagon shaped <new1>
+a ice sculpture of <new1>
+a ivory <new1>
+a ivory carving of <new1>
+a ivory colored <new1>
+a jade carving of <new1>
+a leaf shaped <new1>
+a lime <new1>
+a lime colored <new1>
+a magenta <new1>
+a magenta colored <new1>
+a marble bust of <new1>
+a maroon <new1>
+a maroon colored <new1>
+a metal engraving of <new1>
+a mosaic tile of <new1>
+a navy <new1>
+a navy colored <new1>
+a octagon shaped <new1>
+a olive <new1>
+a olive colored <new1>
+a orange <new1>
+a orange colored <new1>
+a oval shaped <new1>
+a pastry decoration of <new1>
+a pewter figurine of <new1>
+a pumpkin carving of <new1>
+a purple <new1>
+a purple colored <new1>
+a pyramid shaped <new1>
+a rectangular shaped <new1>
+a red <new1>
+a red colored <new1>
+a sand painting of <new1>
+a sand sculpture of <new1>
+a silver <new1>
+a silver colored <new1>
+a snow sculpture of <new1>
+a sphere shaped <new1>
+a stained glass of  <new1>
+a star shaped <new1>
+a sterling silver charm of <new1>
+a teal <new1>
+a teal colored <new1>
+a triangular shaped <new1>
+a turquoise <new1>
+a turquoise colored <new1>
+a wax model of <new1>
+a white <new1>
+a white colored <new1>
+a wood burning of <new1>
+a wood carving of <new1>
+a yellow <new1>
+a yellow colored <new1>
